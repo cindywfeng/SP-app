@@ -17,19 +17,19 @@ class Routine(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     timeofday = models.CharField(max_length=2)
     itemid1 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid1')
+        Item, on_delete=models.CASCADE, related_name='itemid1', default=None, null=True)
     itemid2 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid2')
+        Item, on_delete=models.CASCADE, related_name='itemid2', default=None, null=True)
     itemid3 = models.ForeignKey(
-        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid3')
+        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid3', default=None, null=True)
     itemid4 = models.ForeignKey(
-        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid4')
+        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid4', default=None, null=True)
     itemid5 = models.ForeignKey(
-        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid5')
+        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid5', default=None, null=True)
     itemid6 = models.ForeignKey(
-        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid6')
+        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid6', default=None, null=True)
     itemid7 = models.ForeignKey(
-        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid7')
+        Item, on_delete=models.CASCADE,  blank=True, related_name='itemid7', default=None, null=True)
     comment = models.CharField(max_length=300, blank=True)
 
     def __str__(self):
