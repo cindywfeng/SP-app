@@ -6,7 +6,8 @@ export class Header extends Component {
       <div>
         <a>Home</a>
         <a>History</a>
-        <a>Add log</a>
+        <a>Add skincare log</a>
+        <a>Add skincare item</a>
       </div>
     );
   }

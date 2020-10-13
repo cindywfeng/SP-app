@@ -15,7 +15,7 @@ class Item(models.Model):
 
 class Routine(models.Model):
     date = models.DateTimeField(auto_now_add=True)
-    timeofday = models.CharField(max_length=2)
+    timeofday = models.CharField(max_length=10)
     itemid1 = models.ForeignKey(
         Item, on_delete=models.CASCADE, related_name='itemid1', default=None, null=True)
     itemid2 = models.ForeignKey(
