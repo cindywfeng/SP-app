@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addRoutine } from "../../actions/routines";
 
 export class Form extends Component {
   state = {
-    date: "",
     timeofday: "",
     itemid1: "",
     itemid2: "",
@@ -14,6 +16,10 @@ export class Form extends Component {
     comment: "",
   };
 
+  static propTypes = {
+    addRoutine: PropTypes.func.isRequired,
+  };
+
   // onChange
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
@@ -21,7 +27,40 @@ export class Form extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
+    const {
+      timeofday,
+      itemid1,
+      itemid2,
+      itemid3,
+      itemid4,
+      itemid5,
+      itemid6,
+      itemid7,
+      comment,
+    } = this.state;
+    const routine = {
+      timeofday,
+      itemid1,
+      itemid2,
+      itemid3,
+      itemid4,
+      itemid5,
+      itemid6,
+      itemid7,
+      comment,
+    };
+    console.log({
+      timeofday,
+      itemid1,
+      itemid2,
+      itemid3,
+      itemid4,
+      itemid5,
+      itemid6,
+      itemid7,
+      comment,
+    });
+    this.props.addRoutine(routine);
   };
 
   render() {
@@ -41,7 +80,7 @@ export class Form extends Component {
       <div>
         <h1>Add routine form</h1>
         <form onSubmit={this.onSubmit}>
-          {/* add date */}
+          {/* add date
           <input
             type="date"
             name="date"
@@ -49,7 +88,7 @@ export class Form extends Component {
             onChange={this.onChange}
             value={date}
           ></input>
-          <br />
+          <br /> */}
           {/* specify am/pm */}
           <select
             name="timeofday"
@@ -143,4 +182,4 @@ export class Form extends Component {
   }
 }
 
-export default Form;
+export default connect(null, { addRoutine })(Form);
