@@ -5,13 +5,18 @@ import ReactDOM from "react-dom";
 import Header from "./layout/Header.js";
 import Dashboard from "./routines/Dashboard";
 
+import { Provider } from "react-redux";
+import store from "../store";
+
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <Header />
-        <Dashboard />
-      </Fragment>
+      <Provider store={store}>
+        <Fragment>
+          <Header />
+          <Dashboard />
+        </Fragment>
+      </Provider>
     );
   }
 }
