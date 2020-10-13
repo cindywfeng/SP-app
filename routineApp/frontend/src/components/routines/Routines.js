@@ -7,6 +7,10 @@ export class Routines extends Component {
   static PropTypes = {
     routines: PropTypes.array.isRequired,
   };
+
+  componentDidMount() {
+    this.props.getRoutines();
+  }
   render() {
     return (
       <div>
@@ -21,4 +25,4 @@ const mapstateToProps = (state) => ({
   routines: state.routines.routines,
 });
 
-export default connect(mapstateToProps)(Routines);
+export default connect(mapstateToProps, { getRoutines })(Routines);
