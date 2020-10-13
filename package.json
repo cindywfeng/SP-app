@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./routineApp/frontend/src/index.js --output ./routineApp/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development --watch ./routineApp/frontend/src/index.js --output ./routineApp/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./routineApp/frontend/src/index.js --output ./routineApp/frontend/static/frontend/main.js"
   },
   "repository": {
