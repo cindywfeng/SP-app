@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getRoutines } from "../../actions/routines";
@@ -13,9 +13,15 @@ export class Routines extends Component {
   }
   render() {
     return (
-      <div>
-        <h1> List of all routines</h1>
-      </div>
+      <Fragment>
+        <h1>List of all routines</h1>
+        {this.props.routines.map((routine) => (
+          <h1 key={routine.id}>
+            {routine.date} | {routine.timeofday} | {routine.itemid1} |
+            {routine.itemid2}
+          </h1>
+        ))}
+      </Fragment>
     );
   }
 }
