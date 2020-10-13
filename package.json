@@ -1,7 +1,6 @@
 {
   "name": "project-01",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development ./routineApp/frontend/src/index.js --output ./routineApp/frontend/static/frontend/main.js",
@@ -24,12 +23,19 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "webpack": "^5.0.0",
-    "webpack-cli": "^4.0.0"
+    "css-loader": "^4.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "style-loader": "^1.2.1",
+    "webpack-dev-server": "^3.11.0",
+    "html-webpack-plugin": "^4.3.0"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "description": ""
 }
