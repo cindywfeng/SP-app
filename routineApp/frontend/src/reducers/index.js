@@ -1,3 +1,4 @@
 import { combineReducers } from "redux";
+import routines from "./routines";
 
-export default combineReducers({});
+export default combineReducers({ routines });
