@@ -16,10 +16,13 @@ export class Routines extends Component {
       <Fragment>
         <h1>List of all routines</h1>
         {this.props.routines.map((routine) => (
-          <h1 key={routine.id}>
-            {routine.date} | {routine.timeofday} | {routine.itemid1} |
-            {routine.itemid2}
-          </h1>
+          <div key={routine.id}>
+            <h1>
+              {routine.date} | {routine.timeofday} | {routine.itemid1} |
+              {routine.itemid2}
+            </h1>
+            <button className="delete-btn">Delete</button>
+          </div>
         ))}
       </Fragment>
     );
