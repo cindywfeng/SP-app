@@ -13,6 +13,17 @@ export class Form extends Component {
     itemid7: "",
     comment: "",
   };
+
+  // onChange
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+
+  // onSubmit
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  };
+
   render() {
     const {
       date,
@@ -63,8 +74,8 @@ export class Form extends Component {
           {/* item id 2 */}
           <input
             type="number"
-            name="itemid1"
-            id="itemid1"
+            name="itemid2"
+            id="itemid2"
             onChange={this.onChange}
             value={itemid2}
           ></input>
@@ -72,8 +83,8 @@ export class Form extends Component {
           {/* item id 3 */}
           <input
             type="number"
-            name="itemid1"
-            id="itemid1"
+            name="itemid3"
+            id="itemid3"
             onChange={this.onChange}
             value={itemid3}
           ></input>
@@ -81,8 +92,8 @@ export class Form extends Component {
           {/* item id 4 */}
           <input
             type="number"
-            name="itemid1"
-            id="itemid1"
+            name="itemid4"
+            id="itemid4"
             onChange={this.onChange}
             value={itemid4}
           ></input>
@@ -90,8 +101,8 @@ export class Form extends Component {
           {/* item id 5 */}
           <input
             type="number"
-            name="itemid1"
-            id="itemid1"
+            name="itemid5"
+            id="itemid5"
             onChange={this.onChange}
             value={itemid5}
           ></input>
@@ -99,8 +110,8 @@ export class Form extends Component {
           {/* item id 6 */}
           <input
             type="number"
-            name="itemid1"
-            id="itemid1"
+            name="itemid6"
+            id="itemid6"
             onChange={this.onChange}
             value={itemid6}
           ></input>
@@ -108,8 +119,8 @@ export class Form extends Component {
           {/* item id 7 */}
           <input
             type="number"
-            name="itemid1"
-            id="itemid1"
+            name="itemid7"
+            id="itemid7"
             onChange={this.onChange}
             value={itemid7}
           ></input>
@@ -122,6 +133,10 @@ export class Form extends Component {
             onChange={this.onChange}
             value={comment}
           ></input>
+          {/* submit button */}
+          <button type="submit" className="submit-btn">
+            Submit
+          </button>
         </form>
       </div>
     );
