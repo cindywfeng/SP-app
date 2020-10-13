@@ -18,7 +18,7 @@ export const getRoutines = () => (dispatch) => {
 // DELETE ROUTINES
 export const deleteRoutine = (id) => (dispatch) => {
   axios
-    .get(`/api/routines/${id}/`)
+    .delete(`/api/routines/${id}/`)
     .then((res) => {
       dispatch({
         type: DELETE_ROUTINE,

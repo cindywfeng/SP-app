@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getRoutines } from "../../actions/routines";
+import { getRoutines, deleteRoutine } from "../../actions/routines";
 
 export class Routines extends Component {
   static PropTypes = {
@@ -21,7 +21,12 @@ export class Routines extends Component {
               {routine.date} | {routine.timeofday} | {routine.itemid1} |
               {routine.itemid2}
             </h1>
-            <button className="delete-btn">Delete</button>
+            <button
+              onClick={this.props.deleteRoutine.bind(this, routine.id)}
+              className="delete-btn"
+            >
+              Delete
+            </button>
           </div>
         ))}
       </Fragment>
@@ -34,4 +39,6 @@ const mapstateToProps = (state) => ({
   routines: state.routines.routines,
 });
 
-export default connect(mapstateToProps, { getRoutines })(Routines);
+export default connect(mapstateToProps, { getRoutines, deleteRoutine })(
+  Routines
+);
