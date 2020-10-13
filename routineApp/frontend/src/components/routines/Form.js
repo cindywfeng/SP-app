@@ -96,73 +96,38 @@ export class Form extends Component {
             onChange={this.onChange}
             value={timeofday}
           >
+            <option value="choose">Select morning or evening</option>
+
             <option value="morning">Morning</option>
             <option value="evening">Evening</option>
           </select>
           <br />
           {/* add items */}
           {/* item id 1 */}
-          <input
-            type="number"
+          <select
             name="itemid1"
             id="itemid1"
             onChange={this.onChange}
             value={itemid1}
-          ></input>
+          >
+            <option value="choose">Select skincare</option>
+
+            <option value="1">glycolic acid</option>
+            <option value="2">BHA</option>
+          </select>
           <br />
           {/* item id 2 */}
-          <input
-            type="number"
+          <select
             name="itemid2"
             id="itemid2"
             onChange={this.onChange}
             value={itemid2}
-          ></input>
-          <br />
-          {/* item id 3 */}
-          <input
-            type="number"
-            name="itemid3"
-            id="itemid3"
-            onChange={this.onChange}
-            value={itemid3}
-          ></input>
-          <br />
-          {/* item id 4 */}
-          <input
-            type="number"
-            name="itemid4"
-            id="itemid4"
-            onChange={this.onChange}
-            value={itemid4}
-          ></input>
-          <br />
-          {/* item id 5 */}
-          <input
-            type="number"
-            name="itemid5"
-            id="itemid5"
-            onChange={this.onChange}
-            value={itemid5}
-          ></input>
-          <br />
-          {/* item id 6 */}
-          <input
-            type="number"
-            name="itemid6"
-            id="itemid6"
-            onChange={this.onChange}
-            value={itemid6}
-          ></input>
-          <br />
-          {/* item id 7 */}
-          <input
-            type="number"
-            name="itemid7"
-            id="itemid7"
-            onChange={this.onChange}
-            value={itemid7}
-          ></input>
+          >
+            <option value="choose">Select skincare</option>
+
+            <option value="1">glycolic acid</option>
+            <option value="2">BHA</option>
+          </select>
           <br />
           {/* add comment */}
           <input
