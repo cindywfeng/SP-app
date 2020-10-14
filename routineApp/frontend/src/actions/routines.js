@@ -15,7 +15,7 @@ export const getRoutines = () => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
-// DELETE ROUTINES
+// DELETE ROUTINE
 export const deleteRoutine = (id) => (dispatch) => {
   axios
     .delete(`/api/routines/${id}/`)
