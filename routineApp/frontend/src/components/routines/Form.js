@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addRoutine } from "../../actions/routines";
@@ -90,7 +91,10 @@ export class Form extends Component {
       created_at,
     });
     this.props.addItem(item);
-    // create option for the drop-down list.
+    console.log(item);
+    // create a new option for the drop-down data-list in Routine Form.
+    const option = React.createElement("option", { id: "option" }, "h1");
+    ReactDOM.render(option, document.getElementById("itemid1form"));
   };
 
   render() {
@@ -111,7 +115,7 @@ export class Form extends Component {
       created_at,
     } = this.state;
     return (
-      <div>
+      <div id="form-div">
         <h1>Add routine form</h1>
         <form onSubmit={this.onSubmit}>
           {/* select morning/evening */}
@@ -131,7 +135,7 @@ export class Form extends Component {
           <input
             list="itemid1list"
             name="itemid1"
-            id="itemid1"
+            id="itemid1form"
             onChange={this.onChange}
             value={itemid1}
             placeholder="1."

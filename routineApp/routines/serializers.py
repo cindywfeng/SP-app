@@ -8,11 +8,14 @@ from routines.models import Item
 
 class RoutineSerializer(serializers.ModelSerializer):
     class Meta:
+        itemid1 = serializers.ReadOnlyField(source='itemid1.name')
         model = Routine
-        fields = '__all__'
+        fields = ('id', 'date', 'timeofday', 'comment', 'itemid1',
+                  'itemid2', 'itemid3', 'itemid4', 'itemid5', 'itemid6', 'itemid7')
 
 
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
+
         model = Item
-        fields = '__all__'
+        fields = ('id', 'name', 'brand', 'category', 'created_at')
