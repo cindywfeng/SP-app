@@ -20,7 +20,7 @@ export class Items extends Component {
         {this.props.items.map((item) => (
           <div key={item.id}>
             <h1>
-              {item.date} | {item.timeofday} | {item.itemid1} |{item.itemid2}
+              {item.created_at} | {item.name} | {item.brand} |{item.category}
             </h1>
             <button
               onClick={this.props.deleteItem.bind(this, item.id)}
