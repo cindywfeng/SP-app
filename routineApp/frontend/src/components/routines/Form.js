@@ -8,6 +8,7 @@ import "./Form.css";
 
 export class Form extends Component {
   state = {
+    // routine states
     timeofday: "",
     itemid1: "",
     itemid2: "",
@@ -17,6 +18,7 @@ export class Form extends Component {
     itemid6: "",
     itemid7: "",
     comment: "",
+    // item states
     name: "",
     brand: "",
     category: "",
@@ -88,6 +90,7 @@ export class Form extends Component {
       created_at,
     });
     this.props.addItem(item);
+    // create option for the drop-down list.
   };
 
   render() {
@@ -111,16 +114,7 @@ export class Form extends Component {
       <div>
         <h1>Add routine form</h1>
         <form onSubmit={this.onSubmit}>
-          {/* add date
-          <input
-            type="date"
-            name="date"
-            id="date"
-            onChange={this.onChange}
-            value={date}
-          ></input>
-          <br /> */}
-          {/* specify am/pm */}
+          {/* select morning/evening */}
           <select
             name="timeofday"
             id="timeofday"
@@ -128,37 +122,32 @@ export class Form extends Component {
             value={timeofday}
           >
             <option value="choose">Select morning or evening</option>
-
             <option value="morning">Morning</option>
             <option value="evening">Evening</option>
           </select>
           <br />
-          {/* add items */}
+          {/* select items */}
           {/* item id 1 */}
-          <select
+          <input
+            list="itemid1list"
             name="itemid1"
             id="itemid1"
             onChange={this.onChange}
             value={itemid1}
-          >
-            <option value="choose">Select skincare</option>
-
-            <option value="1">glycolic acid</option>
-            <option value="2">BHA</option>
-          </select>
+            placeholder="1."
+          />
+          <datalist id="itemid1list"></datalist>
           <br />
           {/* item id 2 */}
-          <select
+          <input
+            list="itemid2list"
             name="itemid2"
             id="itemid2"
             onChange={this.onChange}
             value={itemid2}
-          >
-            <option value="choose">Select skincare</option>
-
-            <option value="1">glycolic acid</option>
-            <option value="2">BHA</option>
-          </select>
+            placeholder="2."
+          />
+          <datalist id="itemid2list"></datalist>
           <br />
           {/* add comment */}
           <input
@@ -167,6 +156,7 @@ export class Form extends Component {
             id="comment"
             onChange={this.onChange}
             value={comment}
+            placeholder="comment"
           ></input>
           {/* submit button */}
           <button type="submit" className="submit-btn">
@@ -180,23 +170,25 @@ export class Form extends Component {
         <form id="itemform" onSubmit={this.onSubmit1}>
           {/* Input name */}
           <input
-            type="text"
+            list="name-list"
             name="name"
             id="name"
             value={name}
             onChange={this.onChange}
             placeholder="name of item"
-          ></input>
+          />
+          <datalist id="name-list"></datalist>
           <br />
           {/* Input brand */}
           <input
-            type="text"
+            list="brand-list"
             name="brand"
             id="brand"
             value={brand}
             onChange={this.onChange}
             placeholder="name of brand"
-          ></input>
+          />
+          <datalist id="brand-list"></datalist>
           <br />
           {/* Input category */}
           <select
