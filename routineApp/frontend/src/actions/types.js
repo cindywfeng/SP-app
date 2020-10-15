@@ -8,3 +8,6 @@ export const DELETE_ITEM = "DELETE_ITEM";
 export const ADD_ITEM = "ADD_ITEM";
 // Errors
 export const GET_ERRORS = "GET_ERRORS";
+// Messages
+export const GET_MESSAGES = "GET_MESSAGES";
+export const CREATE_MESSAGE = "CREATE_MESSAGE";

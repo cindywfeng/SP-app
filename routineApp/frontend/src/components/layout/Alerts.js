@@ -10,14 +10,30 @@ export class Alerts extends Component {
   componentDidUpdate(prevProps) {
     const { error, alert } = this.props;
     if (error !== prevProps.error) {
-      if (error.msg.name && error.msg.brand) {
+      // ITEMS FORM ERRORS
+      if (error.msg.name && error.msg.brand && error.msg.category) {
         // cant make multiline?
+        alert.error(
+          `Name: ${error.msg.name.join()} Brand: ${error.msg.brand.join()} Category: ${error.msg.category.join()}`
+        );
+      } else if (error.msg.name && error.msg.brand)
         alert.error(
           `Name: ${error.msg.name.join()} Brand: ${error.msg.brand.join()}`
         );
-      } else if (error.msg.name) alert.error(`Name: ${error.msg.name.join()}`);
+      else if (error.msg.name && error.msg.category)
+        alert.error(
+          `Name: ${error.msg.name.join()} Category: ${error.msg.category.join()}`
+        );
+      else if (error.msg.brand && error.msg.category)
+        alert.error(
+          `Brand: ${error.msg.brand.join()} Category: ${error.msg.category.join()}`
+        );
+      else if (error.msg.name) alert.error(`Name: ${error.msg.name.join()}`);
       else if (error.msg.brand) alert.error(`Brand: ${error.msg.brand.join()}`);
+      else if (error.msg.category)
+        alert.error(`Category: ${error.msg.category.join()}`);
     }
+    // ROUTINES FORM ERRORS
   }
   render() {
     return <Fragment></Fragment>;
