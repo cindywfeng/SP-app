@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { getRoutines, deleteRoutine } from "../../actions/routines";
 
 export class Routines extends Component {
-  static PropTypes = {
+  static propTypes = {
     routines: PropTypes.array.isRequired,
     getRoutines: PropTypes.func.isRequired,
     deleteRoutine: PropTypes.func.isRequired,

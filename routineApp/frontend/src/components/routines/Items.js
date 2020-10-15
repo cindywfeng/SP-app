@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { getItems, deleteItem } from "../../actions/items";
 
 export class Items extends Component {
-  static PropTypes = {
+  static propTypes = {
     items: PropTypes.array.isRequired,
     getItems: PropTypes.func.isRequired,
     deleteItem: PropTypes.func.isRequired,
