@@ -72,6 +72,13 @@ export class Form extends Component {
       comment,
     });
     this.props.addRoutine(routine);
+    // clear form
+    this.setState({
+      name: "",
+      brand: "",
+      category: "",
+      created_at: "",
+    });
   };
 
   // onSubmit for items
@@ -91,6 +98,18 @@ export class Form extends Component {
       created_at,
     });
     this.props.addItem(item);
+    // clear form
+    this.setState({
+      timeofday: "",
+      itemid1: "",
+      itemid2: "",
+      itemid3: "",
+      itemid4: "",
+      itemid5: "",
+      itemid6: "",
+      itemid7: "",
+      comment: "",
+    });
     console.log(item);
     // create a new option for the drop-down data-list in Routine Form.
     const option = React.createElement("option", { id: "option" }, "h1");
@@ -124,6 +143,7 @@ export class Form extends Component {
             id="timeofday"
             onChange={this.onChange}
             value={timeofday}
+            required
           >
             <option value="choose">Select morning or evening</option>
             <option value="morning">Morning</option>
@@ -138,7 +158,8 @@ export class Form extends Component {
             id="itemid1form"
             onChange={this.onChange}
             value={itemid1}
-            placeholder="1."
+            placeholder="1. Skincare item"
+            required
           />
           <datalist id="itemid1list"></datalist>
           <br />
@@ -149,7 +170,8 @@ export class Form extends Component {
             id="itemid2"
             onChange={this.onChange}
             value={itemid2}
-            placeholder="2."
+            placeholder="2. Skincare item"
+            required
           />
           <datalist id="itemid2list"></datalist>
           <br />
