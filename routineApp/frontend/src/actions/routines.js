@@ -1,9 +1,14 @@
 import axios from "axios";
 
 // messages
-import { createMessage } from "./messages";
+import { createMessage, returnErrors } from "./messages";
 
-import { GET_ROUTINES, DELETE_ROUTINE, ADD_ROUTINE, GET_ERRORS } from "./types";
+import {
+  GET_ROUTINES,
+  DELETE_ROUTINE,
+  ADD_ROUTINE,
+  RETURN_ERRORS,
+} from "./types";
 
 // GET ROUTINES
 export const getRoutines = () => (dispatch) => {
@@ -15,7 +20,9 @@ export const getRoutines = () => (dispatch) => {
         payload: res.data,
       });
     })
-    .catch((err) => console.log(err));
+    .catch((err) =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };
 
 // DELETE ROUTINE
@@ -45,14 +52,7 @@ export const addRoutine = (routine) => (dispatch) => {
         payload: res.data,
       });
     })
-    .catch((err) => {
-      const errors = {
-        msg: err.response.data,
-        status: err.response.status,
-      };
-      dispatch({
-        type: GET_ERRORS,
-        payload: errors,
-      });
-    });
+    .catch((err) =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };
