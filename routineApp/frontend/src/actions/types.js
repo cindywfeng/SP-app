@@ -6,3 +6,5 @@ export const ADD_ROUTINE = "ADD_ROUTINE";
 export const GET_ITEMS = "GET_ITEMS";
 export const DELETE_ITEM = "DELETE_ITEM";
 export const ADD_ITEM = "ADD_ITEM";
+// Errors
+export const GET_ERRORS = "GET_ERRORS";
