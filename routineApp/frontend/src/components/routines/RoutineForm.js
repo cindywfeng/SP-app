@@ -9,6 +9,9 @@ import Form2 from "./Form2";
 import Form3 from "./Form3";
 import Form4 from "./Form4";
 import Form5 from "./Form5";
+import Form6 from "./Form6";
+
+import Dashboard from "./Dashboard";
 
 export class RoutineForm extends Component {
   state = {
@@ -91,45 +94,50 @@ export class RoutineForm extends Component {
         );
       case 2:
         return (
-          //   <Form2
-          //     nextStep={this.nextStep}
-          //     prevStep={this.prevStep}
-          //     handleChange={this.handleChange}
-          //     values={values}
-          //   />
-          <h1> Form 2</h1>
+          <Form2
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
         );
       case 3:
         return (
-          //   <Form3
-          //     nextStep={this.nextStep}
-          //     prevStep={this.prevStep}
-          //     handleChange={this.handleChange}
-          //     values={values}
-          //   />
-          <h1> Form 2</h1>
+          <Form3
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
         );
       case 4:
         return (
-          //   <Form4
-          //     nextStep={this.nextStep}
-          //     prevStep={this.prevStep}
-          //     handleChange={this.handleChange}
-          //     values={values}
-          //   />
-          <h1> Form 4</h1>
+          <Form4
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
         );
       case 5:
         return (
-          //   <Form5
-          //     nextStep={this.nextStep}
-          //     prevStep={this.prevStep}
-          //     handleChange={this.handleChange}
-          //     values={values}
-          //   />
-          <h1> Form 5</h1>
+          <Form5
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
         );
       case 6:
+        return (
+          <Form6
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 7:
         return <Dashboard />;
       default:
         console.log("This is a multi-step form built with React.");

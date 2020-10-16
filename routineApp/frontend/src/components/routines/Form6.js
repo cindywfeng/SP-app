@@ -4,7 +4,7 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
-export class Form2 extends Component {
+export class Form6 extends Component {
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -20,18 +20,12 @@ export class Form2 extends Component {
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar title="Step 1: Cleansing"></AppBar>
+          <AppBar title="Any Comments about this routine?"></AppBar>
           <TextField
-            hintText="Select Skincare item 1"
-            floatingLabelText="Skincare item 1"
-            onChange={handleChange("itemid1")}
-            defaultValue={values.itemid1}
-          />
-          <TextField
-            hintText="Select Skincare item 2"
-            floatingLabelText="Skincare item 2"
-            onChange={handleChange("itemid2")}
-            defaultValue={values.itemid2}
+            hintText="Comment"
+            floatingLabelText="Comment"
+            onChange={handleChange("comment")}
+            defaultValue={values.comment}
           />
           <RaisedButton
             label="Continue"
@@ -45,4 +39,4 @@ export class Form2 extends Component {
   }
 }
 
-export default Form2;
+export default Form6;
