@@ -3,6 +3,11 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
+// redx
+import ReactDOM from "react-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addRoutine } from "../../actions/routines";
 
 export class Form6 extends Component {
   continue = (e) => {
@@ -40,4 +45,4 @@ export class Form6 extends Component {
   }
 }
 
-export default Form6;
+export default connect(null, { addRoutine })(Form6);

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // components
 import Header from "./layout/Header.js";
@@ -25,15 +26,19 @@ const alertOptions = {
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <AlertProvider template={AlertTemplate} {...alertOptions}>
-          <Fragment>
-            <Header />
-            <Alerts />
-            <Dashboard />
-          </Fragment>
-        </AlertProvider>
-      </Provider>
+      <BrowserRouter>
+        <Switch>
+          <Provider store={store}>
+            <AlertProvider template={AlertTemplate} {...alertOptions}>
+              <Fragment>
+                <Header />
+                <Alerts />
+                <Dashboard />
+              </Fragment>
+            </AlertProvider>
+          </Provider>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

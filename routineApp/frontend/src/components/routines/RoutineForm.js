@@ -13,6 +13,7 @@ import Form6 from "./Form6";
 import Confirm from "./Confirm";
 
 import Dashboard from "./Dashboard";
+import { Redirect } from "react-router-dom";
 
 export class RoutineForm extends Component {
   state = {
@@ -145,7 +146,7 @@ export class RoutineForm extends Component {
           />
         );
       case 7:
-        return <Dashboard />;
+        return <Redirect to="/" />;
       default:
         console.log("This is a multi-step form built with React.");
     }
