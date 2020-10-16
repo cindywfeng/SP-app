@@ -1,4 +1,3 @@
-
 from rest_framework import routers
 from .api import RoutineViewSet
 from .api import ItemViewSet
