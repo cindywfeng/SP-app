@@ -57,6 +57,11 @@ export class RoutineForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
+  onSubmit = (input) => (e) => {
+    e.preventDefault();
+    console.log("submitted");
+  };
+
   render() {
     const { step } = this.state;
     const {
@@ -136,6 +141,7 @@ export class RoutineForm extends Component {
             prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
+            onSubmit={this.onSubmit}
           />
         );
       case 7:

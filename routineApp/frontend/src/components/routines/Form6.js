@@ -7,6 +7,7 @@ import RaisedButton from "material-ui/RaisedButton";
 export class Form6 extends Component {
   continue = (e) => {
     e.preventDefault();
+    this.props.onSubmit();
     this.props.nextStep();
   };
 
