@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addItem } from "../../actions/items";
 
-export class ItemForm extends Component {
+import "./Form.css";
+
+export class Form extends Component {
   state = {
+    // item states
     name: "",
     brand: "",
     category: "",
@@ -18,9 +22,8 @@ export class ItemForm extends Component {
   // onChange
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
-  // onSubmit
-
-  onSubmit = (e) => {
+  // onSubmit for items
+  onSubmit1 = (e) => {
     e.preventDefault();
     const { name, brand, category, created_at } = this.state;
     const item = {
@@ -36,33 +39,45 @@ export class ItemForm extends Component {
       created_at,
     });
     this.props.addItem(item);
+    // clear form
+    this.setState({
+      name: "",
+      brand: "",
+      category: "",
+      created_at: "",
+    });
+    console.log(item);
   };
 
   render() {
     const { name, brand, category, created_at } = this.state;
     return (
-      <div>
+      <div id="form-div">
+        {/* ITEMS FORM */}
+
         <h1>Add item form</h1>
-        <form id="itemform" onSubmit={this.onSubmit}>
+        <form id="itemform" onSubmit={this.onSubmit1}>
           {/* Input name */}
           <input
-            type="text"
+            list="name-list"
             name="name"
             id="name"
             value={name}
             onChange={this.onChange}
             placeholder="name of item"
-          ></input>
+          />
+          <datalist id="name-list"></datalist>
           <br />
           {/* Input brand */}
           <input
-            type="text"
+            list="brand-list"
             name="brand"
             id="brand"
             value={brand}
             onChange={this.onChange}
             placeholder="name of brand"
-          ></input>
+          />
+          <datalist id="brand-list"></datalist>
           <br />
           {/* Input category */}
           <select
@@ -89,4 +104,4 @@ export class ItemForm extends Component {
   }
 }
 
-export default connect(null, { addItem })(ItemForm);
+export default connect(null, { addItem })(Form);
