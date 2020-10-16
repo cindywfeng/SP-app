@@ -1,9 +1,9 @@
 import axios from "axios";
 
 // messages
-import { createMessage, returnErrors } from "./messages";
+import { createMessage } from "./messages";
 
-import { GET_ITEMS, DELETE_ITEM, ADD_ITEM, RETURN_ERRORS } from "./types";
+import { GET_ITEMS, DELETE_ITEM, ADD_ITEM, GET_ERRORS } from "./types";
 
 // GET ITEMS
 export const getItems = () => (dispatch) => {
@@ -15,9 +15,7 @@ export const getItems = () => (dispatch) => {
         payload: res.data,
       });
     })
-    .catch((err) =>
-      dispatch(returnErrors(err.response.data, err.response.status))
-    );
+    .catch((err) => console.log(err));
 };
 
 // DELETE ITEM
@@ -46,7 +44,14 @@ export const addItem = (item) => (dispatch) => {
         payload: res.data,
       });
     })
-    .catch((err) =>
-      dispatch(returnErrors(err.response.data, err.response.status))
-    );
+    .catch((err) => {
+      const errors = {
+        msg: err.response.data,
+        status: err.response.status,
+      };
+      dispatch({
+        type: GET_ERRORS,
+        payload: errors,
+      });
+    });
 };

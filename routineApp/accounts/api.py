@@ -15,7 +15,7 @@ class RegisterAPI(generics.GenericAPIView):
         user = serializer.save()
         return Response({
             "user": UserSerializer(user, context=self.get_serializer_context()).data,
-            "token": AuthToken.objects.create(user)
+            "token": AuthToken.objects.create(user)[1]
         })
 
 # Login API
@@ -26,21 +26,20 @@ class LoginAPI(generics.GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        serializer.is_valid(raise_exception=True)  # to send back errors
         user = serializer.validated_data
-        _, token = AuthToken.objects.create(user)
         return Response({
             "user": UserSerializer(user, context=self.get_serializer_context()).data,
-            "token": token
+            # creates unique token for user (knox)
+            "token": AuthToken.objects.create(user)[1]
         })
+
 # Get User API
 
 
 class UserAPI(generics.RetrieveAPIView):
     permission_classes = [
         permissions.IsAuthenticated,
-
-
     ]
     serializer_class = UserSerializer
 

@@ -94,7 +94,6 @@ export const logout = () => (dispatch, getState) => {
   axios
     .post("/api/auth/logout/", null, tokenConfig(getState))
     .then((res) => {
-      dispatch({ type: "CLEAR_ROUTINES" });
       dispatch({
         type: LOGOUT_SUCCESS,
       });

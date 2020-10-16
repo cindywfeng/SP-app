@@ -11,10 +11,6 @@ export class Alerts extends Component {
   componentDidUpdate(prevProps) {
     const { error, alert, message } = this.props;
     if (error !== prevProps.error) {
-      // Login an Register ERRORS
-      if (error.msg.non_field_errors)
-        alert.error(error.msg.non_field_errors.join());
-      if (error.msg.username) alert.error(error.msg.username.join());
       // ITEMS FORM ERRORS
       if (error.msg.name && error.msg.brand && error.msg.category) {
         // cant make multiline?

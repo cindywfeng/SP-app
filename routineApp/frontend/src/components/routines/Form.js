@@ -74,10 +74,15 @@ export class Form extends Component {
     this.props.addRoutine(routine);
     // clear form
     this.setState({
-      name: "",
-      brand: "",
-      category: "",
-      created_at: "",
+      timeofday: "",
+      itemid1: "",
+      itemid2: "",
+      itemid3: "",
+      itemid4: "",
+      itemid5: "",
+      itemid6: "",
+      itemid7: "",
+      comment: "",
     });
   };
 
@@ -100,20 +105,12 @@ export class Form extends Component {
     this.props.addItem(item);
     // clear form
     this.setState({
-      timeofday: "",
-      itemid1: "",
-      itemid2: "",
-      itemid3: "",
-      itemid4: "",
-      itemid5: "",
-      itemid6: "",
-      itemid7: "",
-      comment: "",
+      name: "",
+      brand: "",
+      category: "",
+      created_at: "",
     });
     console.log(item);
-    // create a new option for the drop-down data-list in Routine Form.
-    const option = React.createElement("option", { id: "option" }, "h1");
-    ReactDOM.render(option, document.getElementById("itemid1form"));
   };
 
   render() {
