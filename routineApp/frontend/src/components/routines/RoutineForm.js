@@ -10,6 +10,7 @@ import Form3 from "./Form3";
 import Form4 from "./Form4";
 import Form5 from "./Form5";
 import Form6 from "./Form6";
+import Confirm from "./Confirm";
 
 import Dashboard from "./Dashboard";
 
