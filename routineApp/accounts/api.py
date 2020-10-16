@@ -39,6 +39,8 @@ class LoginAPI(generics.GenericAPIView):
 class UserAPI(generics.RetrieveAPIView):
     permission_classes = [
         permissions.IsAuthenticated,
+
+
     ]
     serializer_class = UserSerializer
 
