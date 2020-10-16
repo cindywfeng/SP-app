@@ -58,9 +58,55 @@ export class RoutineForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
-  onSubmit = (input) => (e) => {
-    e.preventDefault();
+  onSubmit = (e) => {
     console.log("submitted");
+    e.preventDefault();
+    const {
+      timeofday,
+      itemid1,
+      itemid2,
+      itemid3,
+      itemid4,
+      itemid5,
+      itemid6,
+      itemid7,
+      comment,
+    } = this.state;
+    const routine = {
+      timeofday,
+      itemid1,
+      itemid2,
+      itemid3,
+      itemid4,
+      itemid5,
+      itemid6,
+      itemid7,
+      comment,
+    };
+    console.log({
+      timeofday,
+      itemid1,
+      itemid2,
+      itemid3,
+      itemid4,
+      itemid5,
+      itemid6,
+      itemid7,
+      comment,
+    });
+    this.props.addRoutine(routine);
+    // clear form
+    this.setState({
+      timeofday: "",
+      itemid1: "",
+      itemid2: "",
+      itemid3: "",
+      itemid4: "",
+      itemid5: "",
+      itemid6: "",
+      itemid7: "",
+      comment: "",
+    });
   };
 
   render() {

@@ -12,13 +12,18 @@ import { addRoutine } from "../../actions/routines";
 export class Form6 extends Component {
   continue = (e) => {
     e.preventDefault();
-    this.props.onSubmit();
+    this.props.onSubmit(e);
     this.props.nextStep();
   };
 
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
+  };
+
+  static propTypes = {
+    handleChange: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
   };
 
   render() {
