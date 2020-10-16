@@ -7,21 +7,19 @@ import { logout } from "../../actions/auth";
 export class Header extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
+    logout: PropTypes.func.isRequired,
   };
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
-      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-        <span className="navbar-text mr-3">
+      <ul className="">
+        <span className="">
           <strong>{user ? `Welcome ${user.username}` : ""}</strong>
         </span>
-        <li className="nav-item">
-          <a
-            onClick={this.props.logout}
-            className="nav-link btn btn-info btn-sm text-light"
-          >
+        <li className="">
+          <a onClick={this.props.logout} className="">
             Logout
           </a>
         </li>
@@ -29,14 +27,14 @@ export class Header extends Component {
     );
 
     const guestLinks = (
-      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li className="nav-item">
-          <Link to="/register" className="nav-link">
+      <ul className="">
+        <li className="">
+          <Link to="/register" className="">
             Register
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/login" className="nav-link">
+        <li className="">
+          <Link to="/login" className="">
             Login
           </Link>
         </li>
@@ -44,10 +42,8 @@ export class Header extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-light bg-light">
-        <div className="container">
-          {isAuthenticated ? authLinks : guestLinks}
-        </div>
+      <nav className="">
+        <div className="">{isAuthenticated ? authLinks : guestLinks}</div>
       </nav>
     );
   }

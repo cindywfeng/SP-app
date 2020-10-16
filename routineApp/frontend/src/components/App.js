@@ -18,6 +18,8 @@ import PrivateRoute from "./common/PrivateRoute";
 // react redux store
 import { Provider } from "react-redux";
 import store from "../store";
+// Authentication
+import { loadUser } from "../actions/auth";
 
 // react-alert
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
@@ -33,6 +35,9 @@ const alertOptions = {
 };
 
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
   render() {
     return (
       <Provider store={store}>
