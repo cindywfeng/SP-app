@@ -9,9 +9,8 @@ import RoutineForm from "./RoutineForm";
 export default function Dashboard() {
   return (
     <Fragment>
-      {/* <Form /> */}
       <RoutineForm />
-      {/* <ItemForm /> */}
+      <ItemForm />
       <Routines />
       <Items />
     </Fragment>

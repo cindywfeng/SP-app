@@ -6,7 +6,7 @@ import { addItem } from "../../actions/items";
 
 import "./Form.css";
 
-export class Form extends Component {
+export class ItemForm extends Component {
   state = {
     // item states
     name: "",
@@ -104,4 +104,4 @@ export class Form extends Component {
   }
 }
 
-export default connect(null, { addItem })(Form);
+export default connect(null, { addItem })(ItemForm);
