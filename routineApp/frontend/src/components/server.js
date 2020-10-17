@@ -6,6 +6,8 @@ const path = require("path");
 
 // initialize
 const server = express();
+var cors = require("cors");
+server.use(cors());
 server.locals.layout = false;
 
 // View engine setup
@@ -50,7 +52,7 @@ server.post("/send", (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact" <mason.nader1@ethereal.email>', // sender address
-    to: "cindy.feng94@gmail.com", // list of receivers
+    to: req.body.email, // list of receivers
     subject: "Node Contact Request", // Subject line
     text: "Hello world?", // plain text body
     html: output, // html body

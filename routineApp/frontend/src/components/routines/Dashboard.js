@@ -5,12 +5,14 @@ import Items from "./Items";
 import "./Dashboard.css";
 import ItemForm from "./ItemForm";
 import RoutineForm from "./RoutineForm";
+import EmailForm from "./EmailForm";
 
 export default function Dashboard() {
   return (
     <Fragment>
-      <RoutineForm />
-      <ItemForm />
+      <EmailForm />
+      {/* <RoutineForm />
+      <ItemForm /> */}
       <Routines />
       <Items />
     </Fragment>
