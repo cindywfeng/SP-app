@@ -2,12 +2,18 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { getRoutines } from "../../actions/routines";
 
+import "./EmailForm.css";
+
 export class EmailForm extends Component {
   componentDidMount() {
     this.props.getRoutines();
   }
 
   render() {
+    let lastRoutine = JSON.stringify(
+      this.props.routines[this.props.routines.length - 1]
+    );
+
     return (
       <Fragment>
         <h6></h6>
@@ -21,8 +27,14 @@ export class EmailForm extends Component {
           <input type="email" name="email" />
           <br />
 
-          <label>Message</label>
-          <textarea name="message" rows="5"></textarea>
+          {/* <label>Message</label> */}
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            // defaultValue={JSON.stringify(this.props.routine)}
+            defaultValue={lastRoutine}
+          ></textarea>
           <br />
 
           <button type="submit">Submit</button>
