@@ -1,25 +1,24 @@
 import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { getRoutines } from "../../actions/routines";
 
 export class EmailForm extends Component {
+  componentDidMount() {
+    this.props.getRoutines();
+  }
+
   render() {
     return (
       <Fragment>
+        <h6></h6>
         <h1>Send a report of your skincare routine history to your e-mail</h1>
         <form method="POST" action="http://localhost:3000/send">
           <label>Name</label>
           <input type="text" name="name" />
           <br />
 
-          <label>Company</label>
-          <input type="text" name="company" />
-          <br />
-
           <label>Email Address</label>
           <input type="email" name="email" />
-          <br />
-
-          <label>Phone Number</label>
-          <input type="text" name="phone" />
           <br />
 
           <label>Message</label>
@@ -32,5 +31,9 @@ export class EmailForm extends Component {
     );
   }
 }
+// the middle is the reducer
+const mapstateToProps = (state) => ({
+  routines: state.routines.routines,
+});
 
-export default EmailForm;
+export default connect(mapstateToProps, { getRoutines })(EmailForm);
