@@ -37,7 +37,8 @@ export class EmailForm extends Component {
           .replace(/\"/g, "")
           .replace(/\,/g, ""));
       } else {
-        console.log("im undefined atm");
+        // console.log("im undefined atm");
+        return;
       }
     };
 
@@ -48,7 +49,7 @@ export class EmailForm extends Component {
     let msglastRoutine =
       "A report of your latest recorded skincare routine:" + updatelastRoutine;
 
-    console.log(msglastRoutine);
+    // console.log(msglastRoutine);
 
     const setAttribute = () => {
       document

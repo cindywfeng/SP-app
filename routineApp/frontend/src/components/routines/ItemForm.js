@@ -87,11 +87,10 @@ export class ItemForm extends Component {
             value={category}
           >
             <option value="choose">Select category</option>
-            <option value="1">cleanser</option>
-            <option value="2">serum</option>
-            <option value="2">treatment</option>
-            <option value="2">moisturizer</option>
-            <option value="2">miscellaneous</option>
+            <option value="cleanser">cleanser</option>
+            <option value="serum">serum</option>
+            <option value="treatment">treatment</option>
+            <option value="moisturizer">moisturizer</option>
           </select>
           <br />
           {/* submit button */}
