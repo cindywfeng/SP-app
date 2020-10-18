@@ -27,6 +27,23 @@ export class EmailForm extends Component {
       "\t"
     );
 
+    let lastRoutine1 = JSON.stringify(
+      this.props.routines[this.props.routines.length - 2],
+      [
+        "date",
+        "timeofday",
+        "itemid1",
+        "itemid2",
+        "itemid3",
+        "itemid4",
+        "itemid5",
+        "itemid6",
+        "itemid7",
+        "comment",
+      ],
+      "\t"
+    );
+
     // console.log(lastRoutine);
     // remove the curcly brackets frfom string + quotations marks
     let updatelastRoutine = "";
@@ -60,7 +77,7 @@ export class EmailForm extends Component {
     return (
       <Fragment>
         <h6></h6>
-        <h1>Send a report of your skincare routine history to your e-mail</h1>
+        <h1>Send a report of your latest skincare routine to your e-mail</h1>
         <form method="POST" action="http://localhost:3000/send">
           <label>Name</label>
           <input type="text" name="name" />
@@ -75,7 +92,7 @@ export class EmailForm extends Component {
             id="message"
             name="message"
             rows="5"
-            defaultValue={lastRoutine}
+            defaultValue={(lastRoutine, lastRoutine1)}
           ></textarea>
           <br />
 
