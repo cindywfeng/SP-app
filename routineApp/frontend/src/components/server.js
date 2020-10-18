@@ -42,14 +42,14 @@ server.post("/send", (req, res) => {
     host: "smtp.ethereal.email",
     port: 587,
     auth: {
-      user: "mason.nader1@ethereal.email",
-      pass: "9kj76ka6Mx67QPkvsH",
+      user: "amber.grady62@ethereal.email",
+      pass: "xybMetTUwyz4zptFXS",
     },
   });
 
   // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Nodemailer Contact" <mason.nader1@ethereal.email>', // sender address
+    from: '"Nodemailer Contact" <amber.grady62@ethereal.email>', // sender address
     to: req.body.email, // list of receivers
     subject: "Node Contact Request", // Subject line
     text: "Hello world?", // plain text body

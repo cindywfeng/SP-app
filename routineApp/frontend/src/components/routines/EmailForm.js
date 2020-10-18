@@ -11,8 +11,23 @@ export class EmailForm extends Component {
 
   render() {
     let lastRoutine = JSON.stringify(
-      this.props.routines[this.props.routines.length - 1]
+      this.props.routines[this.props.routines.length - 1],
+      [
+        "date",
+        "timeofday",
+        "itemid1",
+        "itemid2",
+        "itemid3",
+        "itemid4",
+        "itemid5",
+        "itemid6",
+        "itemid7",
+        "comment",
+      ],
+      "\t"
     );
+
+    console.log(lastRoutine);
 
     return (
       <Fragment>
