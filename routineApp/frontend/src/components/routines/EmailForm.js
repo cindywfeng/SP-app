@@ -25,9 +25,39 @@ export class EmailForm extends Component {
         "comment",
       ],
       "\t"
-    );
+    )
+      .replace(/[{}]/g, "")
+      .replace(/\"/g, "")
+      .replace(/\,/g, "");
 
-    console.log(lastRoutine);
+    // console.log(lastRoutine);
+    // remove the curcly brackets frfom string + quotations marks
+    let updatelastRoutine = "";
+    const replacelastRoutine = () => {
+      if (lastRoutine) {
+        return (updatelastRoutine = lastRoutine
+          .replace(/[{}]/g, "")
+          .replace(/\"/g, "")
+          .replace(/\,/g, ""));
+      } else {
+        console.log("im undefined atm");
+      }
+    };
+
+    replacelastRoutine();
+
+    // console.log(replacelastRoutine());
+    // add routine text to lastRoutine
+    let msglastRoutine =
+      "A report of your latest recorded skincare routine:" + updatelastRoutine;
+
+    console.log(msglastRoutine);
+
+    const setAttribute = () => {
+      document
+        .getElementById("message")
+        .setAttribute("defaultValue", "{msglastRoutine}");
+    };
 
     return (
       <Fragment>
@@ -47,7 +77,6 @@ export class EmailForm extends Component {
             id="message"
             name="message"
             rows="5"
-            // defaultValue={JSON.stringify(this.props.routine)}
             defaultValue={lastRoutine}
           ></textarea>
           <br />
