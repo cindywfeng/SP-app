@@ -12,11 +12,11 @@ import "./Dashboard.css";
 export default function Dashboard() {
   return (
     <Fragment>
-      <EmailForm />
+      {/* <EmailForm /> */}
       <RoutineForm />
-      <ItemForm />
-      <Routines />
-      <Items />
+      {/* <ItemForm /> */}
+      {/* <Routines /> */}
+      {/* <Items /> */}
     </Fragment>
   );
 }

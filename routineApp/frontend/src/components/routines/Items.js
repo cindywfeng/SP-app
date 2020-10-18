@@ -16,7 +16,7 @@ export class Items extends Component {
   render() {
     return (
       <Fragment>
-        <h1>List of all items</h1>
+        <h1>Items menu board</h1>
         {this.props.items.map((item) => (
           <div key={item.id}>
             <h1>
