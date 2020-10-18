@@ -13,8 +13,8 @@ export default function Dashboard() {
   return (
     <Fragment>
       <EmailForm />
-      {/* <RoutineForm />
-      <ItemForm /> */}
+      <RoutineForm />
+      <ItemForm />
       <Routines />
       <Items />
     </Fragment>
