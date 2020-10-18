@@ -25,10 +25,7 @@ export class EmailForm extends Component {
         "comment",
       ],
       "\t"
-    )
-      .replace(/[{}]/g, "")
-      .replace(/\"/g, "")
-      .replace(/\,/g, "");
+    );
 
     // console.log(lastRoutine);
     // remove the curcly brackets frfom string + quotations marks
