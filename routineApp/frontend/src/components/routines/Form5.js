@@ -19,21 +19,48 @@ export class Form5 extends Component {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title="Final Step 4: Moisturizing"></AppBar>
-          <TextField
-            hintText="Select Skincare item 7"
-            floatingLabelText="Skincare item 7"
-            onChange={handleChange("itemid7")}
-            defaultValue={values.itemid7}
-          />
-          <RaisedButton
-            label="Continue"
-            primary={true}
-            onClick={this.continue}
-          />
-          <RaisedButton label="Back" primary={false} onClick={this.back} />
-        </React.Fragment>
+        <div id="wrapper">
+          <div className="form-area">
+            <div className="left-space"></div>
+            <div
+              id="middle-space"
+              className="animate__animated animate__backInLeft"
+            >
+              <h1 className="form-text">
+                Step 4: Moisturizing{" "}
+                <img
+                  id="form-text-image"
+                  src="https://www.flaticon.com/svg/static/icons/svg/3368/3368350.svg"
+                />
+              </h1>
+              <div className="text-field-area">
+                <div className="text-field1">
+                  <TextField
+                    className="text-field"
+                    hintText="Select Moisturizer"
+                    floatingLabelText="1. Moisturizer"
+                    onChange={handleChange("itemid7")}
+                    defaultValue={values.itemid7}
+                  />
+                </div>
+              </div>
+
+              <div className="btn-area">
+                <div className="back-btn">
+                  <button id="navigation-btn" onClick={this.back}>
+                    Back
+                  </button>
+                </div>
+                <div className="continue-btn">
+                  <button id="navigation-btn" onClick={this.continue}>
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="right-space"></div>
+          </div>
+        </div>
       </MuiThemeProvider>
     );
   }

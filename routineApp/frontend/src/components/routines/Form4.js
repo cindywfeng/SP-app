@@ -19,27 +19,56 @@ export class Form4 extends Component {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title="Step 3: Treatments"></AppBar>
-          <TextField
-            hintText="Select Skincare item 5"
-            floatingLabelText="Skincare item 5"
-            onChange={handleChange("itemid5")}
-            defaultValue={values.itemid5}
-          />
-          <TextField
-            hintText="Select Skincare item 6"
-            floatingLabelText="Skincare item 6"
-            onChange={handleChange("itemid6")}
-            defaultValue={values.itemid6}
-          />
-          <RaisedButton
-            label="Continue"
-            primary={true}
-            onClick={this.continue}
-          />
-          <RaisedButton label="Back" primary={false} onClick={this.back} />
-        </React.Fragment>
+        <div id="wrapper">
+          <div className="form-area">
+            <div className="left-space"></div>
+            <div
+              id="middle-space"
+              className="animate__animated animate__backInLeft"
+            >
+              <h1 className="form-text">
+                Step 3: Treatments{" "}
+                <img
+                  id="form-text-image"
+                  src="https://www.flaticon.com/svg/static/icons/svg/3440/3440983.svg"
+                />
+              </h1>
+              <div className="text-field-area">
+                <div className="text-field1">
+                  <TextField
+                    className="text-field"
+                    hintText="Select Treatment"
+                    floatingLabelText="1. Treatment"
+                    onChange={handleChange("itemid5")}
+                    defaultValue={values.itemid5}
+                  />
+                </div>
+                <div className="text-field2">
+                  <TextField
+                    hintText="Select Treatment"
+                    floatingLabelText="2. Treatment"
+                    onChange={handleChange("itemid6")}
+                    defaultValue={values.itemid6}
+                  />
+                </div>
+              </div>
+
+              <div className="btn-area">
+                <div className="back-btn">
+                  <button id="navigation-btn" onClick={this.back}>
+                    Back
+                  </button>
+                </div>
+                <div className="continue-btn">
+                  <button id="navigation-btn" onClick={this.continue}>
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="right-space"></div>
+          </div>
+        </div>
       </MuiThemeProvider>
     );
   }
