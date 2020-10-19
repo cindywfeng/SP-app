@@ -70,7 +70,7 @@ td {
 
 /* delete button */
 #delete-btn > button {
-  color: blue;
+  color: red;
   padding: 17px 27px;
   letter-spacing: 0.1em;
   border-radius: 5%;

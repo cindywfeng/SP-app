@@ -59,8 +59,8 @@
 }
 
 .btn-area > .continue-btn > #navigation-btn:hover {
-  animation: fadeOut;
-  animation-duration: 2s;
+  animation: headShake;
+  animation-duration: 1s;
 }
 
 /* back button */
@@ -74,8 +74,8 @@
 }
 
 .btn-area > .back-btn > #navigation-btn:hover {
-  animation: fadeOut;
-  animation-duration: 2s;
+  animation: headShake;
+  animation-duration: 1s;
 }
 
 /* FORM 2 */
