@@ -9,7 +9,7 @@
 
 .form-area {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr;
   font-family: "Josefin Sans", sans-serif;
 }
 /* middle area  */

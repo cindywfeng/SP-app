@@ -15,8 +15,14 @@ export default function Dashboard() {
       {/* <EmailForm /> */}
       <RoutineForm />
       {/* <ItemForm /> */}
-      {/* <Routines /> */}
-      {/* <Items /> */}
+      <Items />
+      <div className="header">
+        <h1>
+          Welcome, name{" "}
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2917/2917242.svg" />
+        </h1>
+      </div>
+      <Routines />
     </Fragment>
   );
 }

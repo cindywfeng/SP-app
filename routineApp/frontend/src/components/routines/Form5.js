@@ -4,6 +4,8 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
+import Items from "./Items";
+
 export class Form5 extends Component {
   continue = (e) => {
     e.preventDefault();
@@ -58,7 +60,9 @@ export class Form5 extends Component {
                 </div>
               </div>
             </div>
-            <div className="right-space"></div>
+            <div className="right-space">
+              <Items />
+            </div>
           </div>
         </div>
       </MuiThemeProvider>
