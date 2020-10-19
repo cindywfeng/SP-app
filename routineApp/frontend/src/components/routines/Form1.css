@@ -76,3 +76,23 @@
   animation: fadeOut;
   animation-duration: 2s;
 }
+
+/* FORM 2 */
+
+#wrapper > .form-area > #middle-space > .text-field-area {
+  margin-bottom: 30px;
+}
+#wrapper > .form-area > #middle-space > .text-field > .text-field1 {
+  margin: 20px;
+}
+
+/* text image*/
+.form-area > #middle-space > .form-text > #form-text-image {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* FORM 3 */
+.text-field-area1 {
+  margin-bottom: 30px;
+}

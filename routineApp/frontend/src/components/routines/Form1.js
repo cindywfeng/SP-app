@@ -20,7 +20,7 @@ export class Form1 extends Component {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
-        <Fragment id="wrapper">
+        <div id="wrapper">
           <div className="form-area">
             <div className="left-space"></div>
             <div
@@ -67,7 +67,7 @@ export class Form1 extends Component {
             </div>
             <div className="right-space"></div>
           </div>
-        </Fragment>
+        </div>
       </MuiThemeProvider>
     );
   }

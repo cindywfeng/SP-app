@@ -4,6 +4,8 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
+import "./Form1.css";
+
 export class Form3 extends Component {
   continue = (e) => {
     e.preventDefault();
@@ -19,27 +21,55 @@ export class Form3 extends Component {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title="Step 2: Serums"></AppBar>
-          <TextField
-            hintText="Select Skincare item 3"
-            floatingLabelText="Skincare item 3"
-            onChange={handleChange("itemid3")}
-            defaultValue={values.itemid3}
-          />
-          <TextField
-            hintText="Select Skincare item 4"
-            floatingLabelText="Skincare item 4"
-            onChange={handleChange("itemid4")}
-            defaultValue={values.itemid4}
-          />
-          <RaisedButton
-            label="Continue"
-            primary={true}
-            onClick={this.continue}
-          />
-          <RaisedButton label="Back" primary={false} onClick={this.back} />
-        </React.Fragment>
+        <div className="wrapper">
+          <div className="form-area">
+            <div className="left-space"></div>
+            <div
+              id="middle-space"
+              className="animate__animated animate__backInLeft"
+            >
+              <h1 className="form-text">
+                Step 2: Serums{" "}
+                <img
+                  id="form-text-image"
+                  src="https://www.flaticon.com/svg/static/icons/svg/2323/2323189.svg"
+                />
+              </h1>
+              <div className="text-field-area1">
+                <div className="text-field1">
+                  <TextField
+                    className="text-field"
+                    hintText="Select Skincare item 3"
+                    floatingLabelText="Skincare item 3"
+                    onChange={handleChange("itemid3")}
+                    defaultValue={values.itemid3}
+                  />
+                  <div className="text-field2">
+                    <TextField
+                      hintText="Select Skincare item 4"
+                      floatingLabelText="Skincare item 4"
+                      onChange={handleChange("itemid4")}
+                      defaultValue={values.itemid4}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="btn-area">
+                <div className="back-btn">
+                  <button id="navigation-btn" onClick={this.back}>
+                    Back
+                  </button>
+                </div>
+                <div className="continue-btn">
+                  <button id="navigation-btn" onClick={this.continue}>
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="right-space"></div>
+          </div>
+        </div>
       </MuiThemeProvider>
     );
   }
