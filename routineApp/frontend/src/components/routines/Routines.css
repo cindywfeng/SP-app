@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* font-family: "Josefin Sans", sans-serif; */
+
+.title-text1 {
+  letter-spacing: 0.1em;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  margin-top: 5%;
+}
+.title-text2 {
+  letter-spacing: 0.1em;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+.title-text3 {
+  letter-spacing: 0.1em;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  font-weight: 400;
+}
+
+.title-text3 > img {
+  width: 20px;
+  margin-left: 15px;
+}
+.title-text4 {
+  letter-spacing: 0.1em;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  font-weight: 200;
+}
+
+/* routine individual */
+.individual-routine {
+  background-color: #eee;
+  margin: 2% 5%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+
+/* images */
+.container1 {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.progressbar1 {
+}
+.progressbar1 li {
+  list-style: none;
+  display: inline-block;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.progressbar1 li > img {
+  width: 60px;
+}
+.progressbar1 li:before {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 0px auto;
+  background-color: transparent;
+  font-size: 20px;
+}
+.progressbar1 li:after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar1 li:first-child:after {
+  content: none;
+}
+.progressbar1 li.active {
+  color: green;
+}
+.progressbar1 li.active:before {
+  border-color: green;
+}
+.progressbar1 li.active + li:after {
+  background-color: green;
+}
+/* PROGRESS BAR */
+
+.container {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.progressbar {
+  counter-reset: step;
+}
+.progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: #ddd;
+  font-size: 20px;
+}
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+  color: green;
+}
+.progressbar li.active:before {
+  border-color: green;
+}
+.progressbar li.active + li:after {
+  background-color: green;
+}
+/* items */
+.container2 {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.progressbar2 {
+}
+.progressbar2 li {
+  list-style: none;
+  display: inline-block;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.progressbar2 li > img {
+  width: 60px;
+}
+.progressbar2 li:before {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  background-color: transparent;
+  font-size: 20px;
+}
+.progressbar2 li:after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar2 li:first-child:after {
+  content: none;
+}
+.progressbar2 li.active {
+  color: green;
+}
+.progressbar2 li.active:before {
+  border-color: green;
+}
+.progressbar2 li.active + li:after {
+  background-color: green;
+}

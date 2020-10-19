@@ -19,7 +19,7 @@ export default function Dashboard() {
         </h1>
       </div>
       {/* <EmailForm /> */}
-      <RoutineForm />
+      {/* <RoutineForm /> */}
       {/* <ItemForm /> */}
       <Routines />
     </Fragment>
