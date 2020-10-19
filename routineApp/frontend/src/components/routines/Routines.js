@@ -85,6 +85,14 @@ export class Routines extends Component {
                   <li>{""}</li>
                 </ul>
               </div>
+              <div className="delete-btn">
+                <button
+                  onClick={this.props.deleteRoutine.bind(this, routine.id)}
+                  className="delete-btn"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           );
         })}

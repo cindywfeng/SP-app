@@ -40,6 +40,8 @@
   padding-top: 20px;
   padding-bottom: 30px;
   border-radius: 10px;
+  animation: backInUp;
+  animation-duration: 1s;
 }
 
 /* images */
@@ -200,4 +202,26 @@
 }
 .progressbar2 li.active + li:after {
   background-color: green;
+}
+
+/* delete button */
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.delete-btn > button {
+  color: red;
+  padding: 17px 27px;
+  letter-spacing: 0.1em;
+  border-radius: 5%;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.delete-btn > button:hover {
+  animation: headShake;
+  animation-duration: 1s;
 }
