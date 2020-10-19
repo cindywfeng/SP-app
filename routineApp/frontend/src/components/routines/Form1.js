@@ -16,6 +16,7 @@ export class Form1 extends Component {
     e.preventDefault();
     this.props.nextStep();
   };
+
   render() {
     const { values, handleChange } = this.props;
     return (
@@ -31,7 +32,7 @@ export class Form1 extends Component {
                 <img src="https://www.flaticon.com/svg/static/icons/svg/146/146205.svg" />
                 Morning or{" "}
                 <img src="https://www.flaticon.com/svg/static/icons/svg/3594/3594380.svg" />
-                Night Routine
+                Evening Routine
               </h1>
 
               <FormControl variant="outlined" className="form">

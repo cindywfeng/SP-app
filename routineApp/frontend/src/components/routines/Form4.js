@@ -5,6 +5,7 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
 import Items from "./Items";
+import ItemsTreatment from "./ItemsTreatment";
 
 export class Form4 extends Component {
   continue = (e) => {
@@ -70,7 +71,7 @@ export class Form4 extends Component {
             </div>
             <div className="right-space">
               {" "}
-              <Items />
+              <ItemsTreatment />
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ import "./Items.css";
 //   </div>
 // ))}
 
-export class Items extends Component {
+export class ItemsSerum extends Component {
   static propTypes = {
     items: PropTypes.array.isRequired,
     getItems: PropTypes.func.isRequired,
@@ -68,7 +68,7 @@ export class Items extends Component {
               <th>Skincare Name</th>
             </tr>
             {this.props.items
-              .filter((item) => item.category === "cleanser")
+              .filter((item) => item.category === "serum")
               .map((filteredItem) => {
                 return (
                   <tr key={filteredItem.id}>
@@ -89,4 +89,4 @@ const mapstateToProps = (state) => ({
   items: state.items.items,
 });
 
-export default connect(mapstateToProps, { getItems, deleteItem })(Items);
+export default connect(mapstateToProps, { getItems, deleteItem })(ItemsSerum);

@@ -12,16 +12,15 @@ import "./Dashboard.css";
 export default function Dashboard() {
   return (
     <Fragment>
-      {/* <EmailForm /> */}
-      <RoutineForm />
-      {/* <ItemForm /> */}
-      <Items />
       <div className="header">
         <h1>
           Welcome, name{" "}
           <img src="https://www.flaticon.com/svg/static/icons/svg/2917/2917242.svg" />
         </h1>
       </div>
+      {/* <EmailForm /> */}
+      <RoutineForm />
+      <ItemForm />
       <Routines />
     </Fragment>
   );

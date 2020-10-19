@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* font-family: "Josefin Sans", sans-serif; */
+
+h1 {
+  letter-spacing: 0.1em;
+}
+
+/* name */
+#name {
+  font-family: "Josefin Sans", sans-serif;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+/* brand */
+#brand {
+  font-family: "Josefin Sans", sans-serif;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+/* category */
+#category {
+  font-family: "Josefin Sans", sans-serif;
+  width: 210px;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  margin-bottom: 5%;
+}
+/* submit button */
+.submit-btn {
+  color: blue;
+  padding: 17px 27px;
+  letter-spacing: 0.1em;
+  border-radius: 5%;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.submit-btn:hover {
+  animation: fadeOut;
+  animation-duration: 2s;
+}

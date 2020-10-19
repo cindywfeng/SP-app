@@ -4,9 +4,8 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
-import Items from "./Items";
-
 import "./Form1.css";
+import ItemsSerum from "./ItemsSerum";
 
 export class Form3 extends Component {
   continue = (e) => {
@@ -70,8 +69,7 @@ export class Form3 extends Component {
               </div>
             </div>
             <div className="right-space">
-              {" "}
-              <Items />
+              <ItemsSerum />
             </div>
           </div>
         </div>

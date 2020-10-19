@@ -4,7 +4,7 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
-import Items from "./Items";
+import ItemsMoisturizer from "./ItemsMoisturizer";
 
 export class Form5 extends Component {
   continue = (e) => {
@@ -29,7 +29,7 @@ export class Form5 extends Component {
               className="animate__animated animate__backInLeft"
             >
               <h1 className="form-text">
-                Step 4: Moisturizing{" "}
+                Step 4: Moisturizer{" "}
                 <img
                   id="form-text-image"
                   src="https://www.flaticon.com/svg/static/icons/svg/3368/3368350.svg"
@@ -61,7 +61,7 @@ export class Form5 extends Component {
               </div>
             </div>
             <div className="right-space">
-              <Items />
+              <ItemsMoisturizer />
             </div>
           </div>
         </div>

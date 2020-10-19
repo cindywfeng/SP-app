@@ -27,7 +27,7 @@ import "./Items.css";
 //   </div>
 // ))}
 
-export class Items extends Component {
+export class AllItems extends Component {
   static propTypes = {
     items: PropTypes.array.isRequired,
     getItems: PropTypes.func.isRequired,
@@ -48,37 +48,43 @@ export class Items extends Component {
   render() {
     return (
       <Fragment>
-        <h1 className="title-text">
-          List of your Skincare{" "}
-          <img src="https://www.flaticon.com/svg/static/icons/svg/2413/2413531.svg" />
-        </h1>
-        <div className="instruction-box">
-          <h2>Instructions</h2>
-          <h3>
-            Input the <span className="item-ref">Item Ref.</span> to the
-            form-field <span className="warning">(not the name!)</span>.
-          </h3>
-        </div>
+        <div className="list">
+          <h1 className="title-text">
+            List of your Skincare{" "}
+            <img src="https://www.flaticon.com/svg/static/icons/svg/2413/2413531.svg" />
+          </h1>
 
-        {/* table */}
-        <table className="table">
-          <div className="table-content">
-            <tr>
-              <th className="item-ref">Item Ref.</th>
-              <th>Skincare Name</th>
-            </tr>
-            {this.props.items
-              .filter((item) => item.category === "cleanser")
-              .map((filteredItem) => {
+          {/* table */}
+          <table className="table">
+            <div className="table-content">
+              <tr>
+                <th>Item Ref.</th>
+                <th>Skincare Name</th>
+                <th>Skincare Brand</th>
+                <th>Skincare Category</th>
+                <th></th>
+              </tr>
+              {this.props.items.map((item) => {
                 return (
-                  <tr key={filteredItem.id}>
-                    <td>{filteredItem.id}</td>
-                    <td>{filteredItem.name}</td>
+                  <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.brand}</td>
+                    <td>{item.category}</td>
+                    <td id="delete-btn">
+                      <button
+                        onClick={this.props.deleteItem.bind(this, item.id)}
+                        className="delete-btn"
+                      >
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 );
               })}
-          </div>
-        </table>
+            </div>
+          </table>
+        </div>
       </Fragment>
     );
   }
@@ -89,4 +95,4 @@ const mapstateToProps = (state) => ({
   items: state.items.items,
 });
 
-export default connect(mapstateToProps, { getItems, deleteItem })(Items);
+export default connect(mapstateToProps, { getItems, deleteItem })(AllItems);

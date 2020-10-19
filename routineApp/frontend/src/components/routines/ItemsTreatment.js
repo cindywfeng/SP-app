@@ -5,29 +5,7 @@ import { getItems, deleteItem } from "../../actions/items";
 
 import "./Items.css";
 
-// comments
-// {item.created_at}
-// |{item.category}
-{
-  /* <td>{item.brand}</td>
-<td>{item.category}</td> */
-}
-
-// {this.props.items.map((item) => (
-//   <div key={item.id}>
-//     <h1>
-//       Item: {item.id}| {item.name} | {item.brand}
-//     </h1>
-//     <button
-//       onClick={this.props.deleteItem.bind(this, item.id)}
-//       className="delete-btn"
-//     >
-//       Delete
-//     </button>
-//   </div>
-// ))}
-
-export class Items extends Component {
+export class ItemsTreatment extends Component {
   static propTypes = {
     items: PropTypes.array.isRequired,
     getItems: PropTypes.func.isRequired,
@@ -68,7 +46,7 @@ export class Items extends Component {
               <th>Skincare Name</th>
             </tr>
             {this.props.items
-              .filter((item) => item.category === "cleanser")
+              .filter((item) => item.category === "treatment")
               .map((filteredItem) => {
                 return (
                   <tr key={filteredItem.id}>
@@ -89,4 +67,6 @@ const mapstateToProps = (state) => ({
   items: state.items.items,
 });
 
-export default connect(mapstateToProps, { getItems, deleteItem })(Items);
+export default connect(mapstateToProps, { getItems, deleteItem })(
+  ItemsTreatment
+);

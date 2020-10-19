@@ -4,7 +4,9 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addItem } from "../../actions/items";
 
-import "./Form.css";
+import "./ItemForm.css";
+import AllItems from "./AllItems";
+import TextField from "material-ui/TextField";
 
 export class ItemForm extends Component {
   state = {
@@ -49,55 +51,95 @@ export class ItemForm extends Component {
     console.log(item);
   };
 
+  // componentDidMount() {
+  //   fetch("https://skincare-api.herokuapp.com").then((response) =>
+  //     response.json().then((data) => console.log(data))
+  //   );
+  // }
+
   render() {
+    const skincareBrands = [
+      "cosrx",
+      "innisfree",
+      "banila co.",
+      "dear, klairs",
+      "laneige",
+      "benton",
+      "guerisson",
+      "the ordinary",
+      "biore",
+    ];
+
     const { name, brand, category, created_at } = this.state;
     return (
-      <div id="form-div">
-        {/* ITEMS FORM */}
-
-        <h1>Add item form</h1>
-        <form id="itemform" onSubmit={this.onSubmit1}>
-          {/* Input name */}
-          <input
-            list="name-list"
-            name="name"
-            id="name"
-            value={name}
-            onChange={this.onChange}
-            placeholder="name of item"
-          />
-          <datalist id="name-list"></datalist>
-          <br />
-          {/* Input brand */}
-          <input
-            list="brand-list"
-            name="brand"
-            id="brand"
-            value={brand}
-            onChange={this.onChange}
-            placeholder="name of brand"
-          />
-          <datalist id="brand-list"></datalist>
-          <br />
-          {/* Input category */}
-          <select
-            name="category"
-            id="category"
-            onChange={this.onChange}
-            value={category}
+      <div id="wrapper">
+        <div className="form-area">
+          <div className="left-space"></div>
+          <div
+            id="middle-space"
+            className="animate__animated animate__backInLeft"
           >
-            <option value="choose">Select category</option>
-            <option value="cleanser">cleanser</option>
-            <option value="serum">serum</option>
-            <option value="treatment">treatment</option>
-            <option value="moisturizer">moisturizer</option>
-          </select>
-          <br />
-          {/* submit button */}
-          <button type="submit" className="submit-btn">
-            Submit
-          </button>
-        </form>
+            <h1>
+              Add Skincare Item
+              <img id="plus" />
+            </h1>
+            <form id="itemform" onSubmit={this.onSubmit1}>
+              {/* Input name */}
+              <input
+                list="name-list"
+                name="name"
+                id="name"
+                value={name}
+                onChange={this.onChange}
+                placeholder="name of item"
+              />
+              <datalist id="name-list"></datalist>
+              <br />
+
+              {/* Input brand */}
+              <input
+                list="brand-list"
+                name="brand"
+                id="brand"
+                value={brand}
+                onChange={this.onChange}
+                placeholder="name of brand"
+              />
+              <datalist id="brand-list">
+                {skincareBrands.map((item) => {
+                  return (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  );
+                })}
+              </datalist>
+              <br />
+              {/* Input category */}
+              <select
+                name="category"
+                id="category"
+                onChange={this.onChange}
+                value={category}
+              >
+                <option value="choose">Select category</option>
+                <option value="cleanser">cleanser</option>
+                <option value="serum">serum</option>
+                <option value="treatment">treatment</option>
+                <option value="moisturizer">moisturizer</option>
+              </select>
+              <br />
+              {/* submit button */}
+              <button type="submit" className="submit-btn">
+                Add
+              </button>
+            </form>
+          </div>
+          <div className="right-space">
+            {" "}
+            <AllItems />
+          </div>
+        </div>
       </div>
     );
   }

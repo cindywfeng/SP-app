@@ -62,3 +62,23 @@ th {
 td {
   padding: 10px 20px;
 }
+
+/* All items  */
+.list {
+  margin-right: 5%;
+}
+
+/* delete button */
+#delete-btn > button {
+  color: blue;
+  padding: 17px 27px;
+  letter-spacing: 0.1em;
+  border-radius: 5%;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#delete-btn > button:hover {
+  animation: headShake;
+  animation-duration: 1s;
+}
