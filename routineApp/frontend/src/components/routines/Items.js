@@ -57,6 +57,8 @@ export class Items extends Component {
           <h3>
             Input the <span className="item-ref">Item Ref.</span> to the
             form-field <span className="warning">(not the name!)</span>.
+            <br />
+            *you may leave the optional fields blank
           </h3>
         </div>
 

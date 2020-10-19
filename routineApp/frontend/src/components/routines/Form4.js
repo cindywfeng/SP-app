@@ -41,7 +41,7 @@ export class Form4 extends Component {
                   <TextField
                     className="text-field"
                     hintText="Select Treatment"
-                    floatingLabelText="1. Treatment"
+                    floatingLabelText="1. Treatment (optional)"
                     onChange={handleChange("itemid5")}
                     defaultValue={values.itemid5}
                   />
@@ -49,7 +49,7 @@ export class Form4 extends Component {
                 <div className="text-field2">
                   <TextField
                     hintText="Select Treatment"
-                    floatingLabelText="2. Treatment"
+                    floatingLabelText="2. Treatment (optional)"
                     onChange={handleChange("itemid6")}
                     defaultValue={values.itemid6}
                   />

@@ -45,7 +45,6 @@ h1 {
 }
 
 .submit-btn:hover {
-  animation: headShake;
-
-  animation-duration: 1s;
+  animation: shakeY;
+  animation-duration: 1.5s;
 }

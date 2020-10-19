@@ -41,14 +41,14 @@ export class Form3 extends Component {
                   <TextField
                     className="text-field"
                     hintText="Select Serum"
-                    floatingLabelText="1. Serum"
+                    floatingLabelText="1. Serum (optional)"
                     onChange={handleChange("itemid3")}
                     defaultValue={values.itemid3}
                   />
                   <div className="text-field2">
                     <TextField
                       hintText="Select Serum"
-                      floatingLabelText="2. Serum"
+                      floatingLabelText="2. Serum (optional)"
                       onChange={handleChange("itemid4")}
                       defaultValue={values.itemid4}
                     />

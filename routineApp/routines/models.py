@@ -22,15 +22,15 @@ class Routine(models.Model):
     itemid1 = models.ForeignKey(
         Item, on_delete=models.CASCADE, related_name='itemid1', default=None, null=True)
     itemid2 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid2', default=None, null=True)
+        Item, on_delete=models.CASCADE, related_name='itemid2', default=None, null=True, blank=True)
     itemid3 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid3', default=None, null=True)
+        Item, on_delete=models.CASCADE, related_name='itemid3', default=None, null=True, blank=True)
     itemid4 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid4', default=None, null=True)
+        Item, on_delete=models.CASCADE, related_name='itemid4', default=None, null=True, blank=True)
     itemid5 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid5', default=None, null=True)
+        Item, on_delete=models.CASCADE, related_name='itemid5', default=None, null=True, blank=True)
     itemid6 = models.ForeignKey(
-        Item, on_delete=models.CASCADE, related_name='itemid6', default=None, null=True)
+        Item, on_delete=models.CASCADE, related_name='itemid6', default=None, null=True, blank=True)
     itemid7 = models.ForeignKey(
         Item, on_delete=models.CASCADE, related_name='itemid7', default=None, null=True)
     comment = models.CharField(max_length=300, blank=True)

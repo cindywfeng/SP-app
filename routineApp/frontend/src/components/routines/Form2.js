@@ -48,7 +48,7 @@ export class Form2 extends Component {
                 <div className="text-field2">
                   <TextField
                     hintText="Select Cleansing Skincare"
-                    floatingLabelText="2. Cleansing skincare"
+                    floatingLabelText="2. Cleansing skincare (optional)"
                     onChange={handleChange("itemid2")}
                     defaultValue={values.itemid2}
                   />
