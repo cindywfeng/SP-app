@@ -23,6 +23,8 @@ const alertOptions = {
   transition: transitions.SCALE,
 };
 
+import "./App.css";
+
 class App extends Component {
   render() {
     return (
@@ -31,7 +33,7 @@ class App extends Component {
           <Provider store={store}>
             <AlertProvider template={AlertTemplate} {...alertOptions}>
               <Fragment>
-                <Header />
+                {/* <Header /> */}
                 <Alerts />
                 <Dashboard />
               </Fragment>
