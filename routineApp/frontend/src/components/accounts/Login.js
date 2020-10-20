@@ -28,7 +28,7 @@ export class Login extends Component {
     }
     const { username, password } = this.state;
     return (
-      <div className="">
+      <div className="window">
         <div className="">
           <h2 className="">Login</h2>
           <form onSubmit={this.onSubmit}>

@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* font-family: "Josefin Sans", sans-serif; */
-/* #D5E0EA
-  #F6E9E8
-  #D2E2CF
-  #E5C480
-  #5B6884
-  #98B6B8
-  #E5BDBB
-  #DCE1D9
-  #7E7878
-  #E9EBEF
-  #F6F4F2 */
+/* #D5E0EA blue
+  #F6E9E8 pink
+  #D2E2CF green
+  #d07256 brickred
+  
+  #5B6884 marineblue
+  #98B6B8 teal
+  #E5BDBB dusty pink
+  #DCE1D9 brigh green calm
+  #7E7878 grey brown
+  #E9EBEF light blue
+  #F6F4F2  white cotton
+  #eee grey
+  */
 
 .header-area {
   padding: 2%;
@@ -20,9 +23,9 @@
 
 .header-area > h1 > img {
   height: 40px;
-  margin-right: 15px;
+  margin-right: 25px;
   animation: backInUp;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 .header-area > h1 {
@@ -35,7 +38,7 @@
 }
 
 .extension {
-  background-color: #0099ff;
+  background-color: #dce1d9;
   width: 100%;
   height: 400px;
   position: absolute;
@@ -114,8 +117,10 @@
   border-radius: 40px;
   margin: 20px 30px;
   border: none;
+  background-color: #f6f4f2;
 }
 .menu-area > button:hover {
+  background-color: #f6e9e8;
 }
 .menu-area > button:focus {
   outline: none;

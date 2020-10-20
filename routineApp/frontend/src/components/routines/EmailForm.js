@@ -75,7 +75,7 @@ export class EmailForm extends Component {
     };
 
     return (
-      <div id="wrapper">
+      <div>
         <div className="form-area3">
           <div className="left-space"></div>
           <div

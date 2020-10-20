@@ -19,6 +19,7 @@
 /* Sign in Log In text */
 .title {
   font-family: "Josefin Sans", sans-serif;
+  color: #7e7878;
 }
 /* text field form text */
 .textfield {
@@ -29,6 +30,14 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
   text-decoration: none;
+  color: #7e7878;
+}
+
+.sub-text:hover {
+  font-family: "Josefin Sans", sans-serif;
+
+  text-decoration: underline;
+  color: #7e7878;
 }
 
 .sub-text-container {
@@ -40,16 +49,18 @@
 }
 
 .submit-btn2 {
-  color: blue;
+  color: #7e7878;
   padding: 17px 27px;
   letter-spacing: 0.1em;
   border-radius: 5%;
   border: none;
   font-family: "Josefin Sans", sans-serif;
   text-align: left;
+  background-color: #eee;
 }
 
 .submit-btn2:hover {
+  background-color: rgb(214, 212, 212);
 }
 
 .submit-btn2:focus {

@@ -72,7 +72,7 @@ export default function Dashboard() {
             viewBox="0 0 1440 320"
           >
             <path
-              fill="#0099ff"
+              fill="#DCE1D9 "
               fill-opacity="1"
               d="M0,192L80,170.7C160,149,320,107,480,112C640,117,800,171,960,186.7C1120,203,1280,181,1360,170.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
             ></path>
@@ -144,6 +144,7 @@ export default function Dashboard() {
       </div>
       <div className="content-area">
         <Routines />
+        {/* <Login1 /> */}
       </div>
     </Fragment>
   );

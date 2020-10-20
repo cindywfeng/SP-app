@@ -18,12 +18,11 @@
 
 .title {
   text-align: left;
-  margin-top: 0;
 }
 
 /* submit button */
 .submit-btn1 {
-  color: blue;
+  color: #98b6b8;
   padding: 17px 27px;
   letter-spacing: 0.1em;
   border-radius: 5%;
@@ -49,7 +48,7 @@
 }
 /* middle area  */
 .form-area3 > #middle-space1 {
-  margin-top: 5%;
+  margin-top: 0;
 }
 /* text */
 .form-area3 > #middle-space1 > .form-text {

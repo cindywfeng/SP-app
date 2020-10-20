@@ -78,7 +78,7 @@
 }
 /* continue button */
 .btn-area > .continue-btn > #navigation-btn {
-  color: blue;
+  color: #98b6b8;
   padding: 17px 27px;
 
   letter-spacing: 0.1em;
@@ -98,7 +98,7 @@
 
 /* back button */
 .btn-area > .back-btn > #navigation-btn {
-  color: blue;
+  color: #98b6b8;
   padding: 17px 27px;
   letter-spacing: 0.1em;
   border-radius: 5%;
