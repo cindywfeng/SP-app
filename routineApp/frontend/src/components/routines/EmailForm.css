@@ -1,3 +1,68 @@
 #message {
   visibility: hidden;
 }
+
+.input {
+  font-family: "Josefin Sans", sans-serif;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.form-field1 {
+  text-align: left;
+}
+
+.title {
+  text-align: left;
+  margin-top: 0;
+}
+
+/* submit button */
+.submit-btn1 {
+  color: blue;
+  padding: 17px 27px;
+  letter-spacing: 0.1em;
+  border-radius: 5%;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: left;
+}
+
+.submit-btn1:hover {
+  animation: shakeY;
+  animation-duration: 1.5s;
+}
+
+.submit-btn1:focus {
+  outline: none;
+}
+
+/* */
+.form-area3 {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  font-family: "Josefin Sans", sans-serif;
+}
+/* middle area  */
+.form-area3 > #middle-space1 {
+  margin-top: 5%;
+}
+/* text */
+.form-area3 > #middle-space1 > .form-text {
+  letter-spacing: 0.1em;
+  font-size: 35px;
+}
+/* text image*/
+.form-area3 > #middle-space1 > .form-text > img {
+  height: 30px;
+  margin-right: 10px;
+}
+/* middle area form */
+.form-area3 > #middle-space1 > .form {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}

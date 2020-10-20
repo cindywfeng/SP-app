@@ -30,7 +30,7 @@ export class Form1 extends Component {
             >
               <h1 className="form-text">
                 <img src="https://www.flaticon.com/svg/static/icons/svg/146/146205.svg" />
-                Morning or{" "}
+                Morning or
                 <img src="https://www.flaticon.com/svg/static/icons/svg/3594/3594380.svg" />
                 Evening Routine
               </h1>

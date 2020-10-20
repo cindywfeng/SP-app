@@ -6,6 +6,8 @@ import Items from "./Items";
 import ItemForm from "./ItemForm";
 import RoutineForm from "./RoutineForm";
 import EmailForm from "./EmailForm";
+import Login1 from "../accounts/Login1";
+import Register1 from "../accounts/Register1";
 
 import Modal from "react-modal";
 
@@ -43,6 +45,21 @@ export default function Dashboard() {
     setIsOpen1(false);
   }
 
+  // nav button
+
+  const [modalIsOpen2, setIsOpen2] = React.useState(false);
+  function openModal2() {
+    setIsOpen2(true);
+  }
+
+  function afterOpenModal2() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal2() {
+    setIsOpen2(false);
+  }
+
   return (
     <Fragment>
       <div className="top-area">
@@ -62,14 +79,30 @@ export default function Dashboard() {
           </svg>
         </div>
         <div className="header-area">
+          <div className="hamburger-container">
+            <button onClick={openModal2} className="hamburger">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" />
+            </button>
+            <Modal
+              isOpen={modalIsOpen2}
+              onAfterOpen={afterOpenModal2}
+              onRequestClose={closeModal2}
+              contentLabel="Example Modal"
+            >
+              <button onClick={closeModal2} id="close-btn">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828774.svg" />
+              </button>
+              <div className="center">
+                <EmailForm />
+              </div>
+            </Modal>
+          </div>
           <h1>
             Welcome, name
             <img src="https://www.flaticon.com/svg/static/icons/svg/2917/2917242.svg" />
           </h1>
         </div>
         <div className="menu-area">
-          {/*------------------------ add rotuine---------------------- */}
-
           <button onClick={openModal}>
             <img src="https://www.flaticon.com/svg/static/icons/svg/1237/1237946.svg" />
             Add Routine
@@ -88,7 +121,7 @@ export default function Dashboard() {
               <RoutineForm />
             </div>
           </Modal>
-          {/*------------------------ add skincare---------------------- */}
+
           <button onClick={openModal1}>
             <img src="https://www.flaticon.com/svg/static/icons/svg/1237/1237946.svg" />
             Add Skincare
@@ -110,9 +143,6 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="content-area">
-        {/* <EmailForm /> */}
-        {/* <RoutineForm /> */}
-        {/* <ItemForm /> */}
         <Routines />
       </div>
     </Fragment>

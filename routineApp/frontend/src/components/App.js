@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "./layout/Header.js";
 import Dashboard from "./routines/Dashboard";
 import Alerts from "./layout/Alerts";
+import EmailForm from "./routines/EmailForm";
 // react redux store
 import { Provider } from "react-redux";
 import store from "../store";

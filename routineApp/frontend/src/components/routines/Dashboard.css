@@ -54,6 +54,48 @@
 }
 
 /* button area */
+/* hamburger */
+.hamburger-container > button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.hamburger-container > button:hover {
+  outline: none;
+  animation: swing;
+  animation-duration: 1s;
+}
+
+.hamburger-container > button:focus {
+  outline: none;
+}
+
+.hamburger-container > button:active {
+  outline: none;
+}
+
+.hamburger-container > button > img {
+  height: 40px;
+}
+
+.center {
+  text-align: center;
+  margin-top: 200px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.menutext {
+  margin: 50px;
+}
+
+.menutext:hover {
+  text-decoration: underline;
+}
+
+/* menu butoons */
 .menu-area {
   text-align: center;
   margin-top: 30px;
@@ -65,14 +107,21 @@
 }
 
 .menu-area > button {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 0.1em;
   padding: 20px 15px;
   border-radius: 40px;
   margin: 20px 30px;
+  border: none;
+}
+.menu-area > button:hover {
 }
 .menu-area > button:focus {
+  outline: none;
+}
+
+.menu-area > button:active {
   outline: none;
 }
 
@@ -107,4 +156,50 @@
 
 #close-btn > img {
   height: 30px;
+}
+
+/* blobs */
+#blob1 {
+  position: absolute;
+  top: 70%;
+  right: 30px;
+  margin: 0;
+  z-index: -1;
+  width: 200px;
+}
+
+#blob2 {
+  position: absolute;
+  top: 79%;
+  left: 30px;
+  margin: 0;
+  z-index: -1;
+  width: 200px;
+}
+
+#blob3 {
+  position: absolute;
+  top: 120%;
+  left: 30px;
+  margin: 0;
+  z-index: -1;
+  width: 400px;
+}
+
+#blob4 {
+  position: absolute;
+  top: 180%;
+  right: 0px;
+  margin: 0;
+  z-index: -1;
+  width: 600px;
+}
+
+#blob5 {
+  position: absolute;
+  top: 300%;
+  left: 0px;
+  margin: 0;
+  z-index: -1;
+  width: 200px;
 }

@@ -36,7 +36,6 @@ export class Routines extends Component {
 
   render() {
     const scrollDown = () => {
-      console.log("scrollin");
       window.scrollTo({
         top: 500,
         behavior: "smooth",

@@ -75,30 +75,53 @@ export class EmailForm extends Component {
     };
 
     return (
-      <Fragment>
-        <h6></h6>
-        <h1>Send a report of your latest skincare routine to your e-mail</h1>
-        <form method="POST" action="http://localhost:3000/send">
-          <label>Name</label>
-          <input type="text" name="name" />
-          <br />
-
-          <label>Email Address</label>
-          <input type="email" name="email" />
-          <br />
-
-          {/* <label>Message</label> */}
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            defaultValue={(lastRoutine, lastRoutine1)}
-          ></textarea>
-          <br />
-
-          <button type="submit">Submit</button>
-        </form>
-      </Fragment>
+      <div id="wrapper">
+        <div className="form-area3">
+          <div className="left-space"></div>
+          <div
+            id="middle-space1"
+            className="animate__animated animate__backInLeft"
+          >
+            <h1 className="title">
+              Send a report of your latest skincare routine to your e-mail
+            </h1>
+            <form method="POST" action="http://localhost:3000/send">
+              <div className="form-wrapper">
+                <div className="form-field1">
+                  <label>Name</label> <br />
+                  <input
+                    placeholder="Jane"
+                    className="input"
+                    type="text"
+                    name="name"
+                  />
+                </div>
+                <div className="form-field1">
+                  <label>Email Address</label> <br />
+                  <input
+                    placeholder="jane.doe@gmail.com"
+                    className="input"
+                    type="email"
+                    name="email"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    defaultValue={(lastRoutine, lastRoutine1)}
+                  ></textarea>
+                </div>
+              </div>
+              <button className="submit-btn1" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
+          <div className="right-space"></div>
+        </div>
+      </div>
     );
   }
 }

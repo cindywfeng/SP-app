@@ -136,7 +136,6 @@ export class ItemForm extends Component {
             </form>
           </div>
           <div className="right-space">
-            {" "}
             <AllItems />
           </div>
         </div>

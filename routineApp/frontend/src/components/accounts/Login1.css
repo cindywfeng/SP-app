@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* font-family: "Josefin Sans", sans-serif; */
+
+.login-form {
+  justify-content: center;
+  min-height: 90vh;
+}
+.button-block {
+  width: 100%;
+}
+.login-background {
+  justify-content: center;
+  min-height: 30vh;
+  padding: 60px;
+}
+
+/* Form */
+/* Sign in Log In text */
+.title {
+  font-family: "Josefin Sans", sans-serif;
+}
+/* text field form text */
+.textfield {
+  font-family: "Josefin Sans", sans-serif;
+}
+/* Don't have an account? */
+.sub-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sub-text-container {
+  margin-top: 50px;
+}
+/* submit button */
+.submit-btn-container {
+  margin-bottom: 20px;
+}
+
+.submit-btn2 {
+  color: blue;
+  padding: 17px 27px;
+  letter-spacing: 0.1em;
+  border-radius: 5%;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: left;
+}
+
+.submit-btn2:hover {
+}
+
+.submit-btn2:focus {
+  outline: none;
+}
+/* BLOB */
+/* blobs */
+.blob1 {
+  position: absolute;
+  top: -80px;
+  left: -300px;
+  margin: 0;
+  z-index: -1;
+  width: 900px;
+}
+
+.blob2 {
+  position: absolute;
+  top: -300px;
+  right: -300px;
+  margin: 0;
+  z-index: -1;
+  width: 900px;
+}
+
+.blob3 {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  margin: 0;
+  z-index: -1;
+  width: 200px;
+}
+
+.blob.disabled {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
