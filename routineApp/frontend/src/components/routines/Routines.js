@@ -33,14 +33,22 @@ export class Routines extends Component {
   componentDidMount() {
     this.props.getRoutines();
   }
+
   render() {
+    const scrollDown = () => {
+      console.log("scrollin");
+      window.scrollTo({
+        top: 500,
+        behavior: "smooth",
+      });
+    };
     return (
       <div className="routines-area">
         <h1 className="title-text1">Recent Skincare Routines</h1>
         {/* Routines in cards */}
         {/* skincare items images */}
         <div className="scroll-down-container">
-          <button className="scroll-down">
+          <button className="scroll-down" onClick={scrollDown}>
             <img src="https://www.flaticon.com/svg/static/icons/svg/32/32195.svg" />
           </button>
         </div>
