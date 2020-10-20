@@ -48,3 +48,7 @@ h1 {
   animation: shakeY;
   animation-duration: 1.5s;
 }
+
+.submit-btn:focus {
+  outline: none;
+}

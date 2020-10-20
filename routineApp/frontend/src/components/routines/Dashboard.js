@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Form from "./Form";
 import Routines from "./Routines";
 import Items from "./Items";
@@ -7,9 +7,42 @@ import ItemForm from "./ItemForm";
 import RoutineForm from "./RoutineForm";
 import EmailForm from "./EmailForm";
 
+import Modal from "react-modal";
+
 import "./Dashboard.css";
 
+Modal.setAppElement("#app");
+
 export default function Dashboard() {
+  // modal
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+  // modal 2
+
+  const [modalIsOpen1, setIsOpen1] = React.useState(false);
+  function openModal1() {
+    setIsOpen1(true);
+  }
+
+  function afterOpenModal1() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal1() {
+    setIsOpen1(false);
+  }
+
   return (
     <Fragment>
       <div className="top-area">
@@ -35,21 +68,53 @@ export default function Dashboard() {
           </h1>
         </div>
         <div className="menu-area">
-          <button>
+          {/*------------------------ add rotuine---------------------- */}
+
+          <button onClick={openModal}>
             <img src="https://www.flaticon.com/svg/static/icons/svg/1237/1237946.svg" />
             Add Routine
           </button>
 
-          <button>
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            contentLabel="Example Modal"
+          >
+            <button onClick={closeModal} id="close-btn">
+              <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828774.svg" />
+            </button>
+            <div>
+              <RoutineForm />
+            </div>
+          </Modal>
+          {/*------------------------ add skincare---------------------- */}
+          <button onClick={openModal1}>
             <img src="https://www.flaticon.com/svg/static/icons/svg/1237/1237946.svg" />
             Add Skincare
           </button>
+
+          <Modal
+            isOpen={modalIsOpen1}
+            onAfterOpen={afterOpenModal1}
+            onRequestClose={closeModal1}
+            contentLabel="Example Modal"
+          >
+            <button onClick={closeModal1} id="close-btn">
+              <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828774.svg" />
+            </button>
+            <div>
+              <ItemForm />
+            </div>
+          </Modal>
         </div>
       </div>
-      {/* <EmailForm /> */}
-      {/* <RoutineForm /> */}
-      {/* <ItemForm /> */}
-      <Routines />
+      <div className="content-area">
+        {/* <EmailForm /> */}
+        {/* <RoutineForm /> */}
+        {/* <ItemForm /> */}
+        <Routines />
+      </div>
     </Fragment>
   );
 }

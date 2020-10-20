@@ -6,7 +6,7 @@
   letter-spacing: 0.1em;
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 .title-text2 {
   letter-spacing: 0.1em;
@@ -224,4 +224,29 @@
 .delete-btn > button:hover {
   animation: headShake;
   animation-duration: 1s;
+}
+
+/* scroll down button */
+.scroll-down-container {
+  text-align: center;
+}
+
+.scroll-down-container > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.scroll-down-container > button:hover {
+  animation: slideOutDown;
+  animation-duration: 1s;
+}
+
+.scroll-down-container > button:focus {
+  outline: none;
+}
+
+.scroll-down-container > button > img {
+  height: 30px;
 }

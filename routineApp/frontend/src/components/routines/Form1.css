@@ -9,12 +9,41 @@
 
 .form-area {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-columns: 0.3fr 1fr 1fr;
   font-family: "Josefin Sans", sans-serif;
 }
+
+.form-area1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* middle area  */
+.form-area1 > #middle-space {
+  margin-top: 30%;
+}
+/* text */
+.form-area1 > #middle-space > .form-text {
+  letter-spacing: 0.1em;
+  font-size: 35px;
+}
+/* text image*/
+.form-area1 > #middle-space > .form-text > img {
+  height: 30px;
+  margin-right: 10px;
+}
+/* middle area form */
+.form-area1 > #middle-space > .form {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* END OF FORM 1 */
+
 /* middle area  */
 .form-area > #middle-space {
-  margin-top: 30%;
+  margin-top: 20%;
 }
 /* text */
 .form-area > #middle-space > .form-text {
@@ -63,6 +92,10 @@
   animation-duration: 1s;
 }
 
+.btn-area > .continue-btn > #navigation-btn:focus {
+  outline: none;
+}
+
 /* back button */
 .btn-area > .back-btn > #navigation-btn {
   color: blue;
@@ -76,6 +109,10 @@
 .btn-area > .back-btn > #navigation-btn:hover {
   animation: headShake;
   animation-duration: 1s;
+}
+
+.btn-area > .back-btn > #navigation-btn:focus {
+  outline: none;
 }
 
 /* FORM 2 */

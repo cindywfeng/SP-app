@@ -22,7 +22,7 @@ export class Form1 extends Component {
     return (
       <MuiThemeProvider>
         <div id="wrapper">
-          <div className="form-area">
+          <div className="form-area1">
             <div className="left-space"></div>
             <div
               id="middle-space"

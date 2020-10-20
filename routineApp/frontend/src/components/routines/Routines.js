@@ -39,6 +39,11 @@ export class Routines extends Component {
         <h1 className="title-text1">Recent Skincare Routines</h1>
         {/* Routines in cards */}
         {/* skincare items images */}
+        <div className="scroll-down-container">
+          <button className="scroll-down">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/32/32195.svg" />
+          </button>
+        </div>
         {this.props.routines.map((routine) => {
           return (
             <div className="individual-routine" key={routine.id}>
