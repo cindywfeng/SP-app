@@ -1,9 +1,5 @@
-# CARE - A Skincare Routine Log App 🌿
-
 ---
-
-http://cindyfengw.pythonanywhere.com
-
+# CARE - A Skincare Routine Log App 🌿
 ---
 
 ## Description
