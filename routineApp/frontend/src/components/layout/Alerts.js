@@ -40,29 +40,34 @@ export class Alerts extends Component {
       if (message.addItem) alert.success(message.addItem);
     }
     // ROUTINES FORM ERRORS
-    if (error.msg.timeofday && error.msg.itemid1 && error.msg.itemid2) {
-      // cant make multiline?
-      alert.error(
-        `Morning/Evening: ${error.msg.timeofday.join()} Skincare item 1: ${error.msg.itemid1.join()} Skincare item 2: ${error.msg.itemid2.join()}`
-      );
-    } else if (error.msg.timeofday && error.msg.itemid1)
-      alert.error(
-        `Morning/Evening: ${error.msg.timeofday.join()} Skincare item 1: ${error.msg.itemid1.join()}`
-      );
-    else if (error.msg.timeofday && error.msg.itemid2)
-      alert.error(
-        `Morning/Evening: ${error.msg.timeofday.join()} Skincare item 2: ${error.msg.itemid2.join()}`
-      );
-    else if (error.msg.itemid1 && error.msg.itemid2)
-      alert.error(
-        `Skincare item 1: ${error.msg.itemid1.join()} Skincare item 2: ${error.msg.itemid2.join()}`
-      );
-    else if (error.msg.timeofday)
-      alert.error(`Morning/Evening: ${error.msg.timeofday.join()}`);
-    else if (error.msg.itemid1)
-      alert.error(`Skincare item 1: ${error.msg.itemid1.join()}`);
-    else if (error.msg.itemid2)
-      alert.error(`Skincare item 2: ${error.msg.itemid2.join()}`);
+    if (error !== prevProps.error) {
+      if (error.msg.timeofday && error.msg.itemid1 && error.msg.itemid2) {
+        // cant make multiline?
+        alert.error(
+          `Morning/Evening: ${error.msg.timeofday.join()} Skincare item 1: ${error.msg.itemid1.join()} Skincare item 2: ${error.msg.itemid2.join()}`
+        );
+      } else if (error.msg.timeofday && error.msg.itemid1)
+        alert.error(
+          `Morning/Evening: ${error.msg.timeofday.join()} Skincare item 1: ${error.msg.itemid1.join()}`
+        );
+      else if (error.msg.timeofday && error.msg.itemid2)
+        alert.error(
+          `Morning/Evening: ${error.msg.timeofday.join()} Skincare item 2: ${error.msg.itemid2.join()}`
+        );
+      else if (error.msg.itemid1 && error.msg.itemid2)
+        alert.error(
+          `Skincare item 1: ${error.msg.itemid1.join()} Skincare item 2: ${error.msg.itemid2.join()}`
+        );
+      else if (error.msg.timeofday)
+        alert.error(`Morning/Evening: ${error.msg.timeofday.join()}`);
+      else if (error.msg.itemid1)
+        alert.error(`Skincare item 1: ${error.msg.itemid1.join()}`);
+      else if (error.msg.itemid2)
+        alert.error(`Skincare item 2: ${error.msg.itemid2.join()}`);
+      // sign in errors
+      else if (error.msg.non_field_errors)
+        alert.error(error.msg.non_field_errors.join());
+    }
 
     // ROUTINE MESSAGES
     if (message !== prevProps.message) {
