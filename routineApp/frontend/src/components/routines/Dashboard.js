@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
+
 import Form from "./Form";
 import Routines from "./Routines";
 import Items from "./Items";
@@ -15,7 +17,7 @@ import "./Dashboard.css";
 
 Modal.setAppElement("#app");
 
-export default function Dashboard() {
+function Dashboard() {
   // modal
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -98,7 +100,7 @@ export default function Dashboard() {
             </Modal>
           </div>
           <h1>
-            Welcome, name
+            Welcome
             <img src="https://www.flaticon.com/svg/static/icons/svg/2917/2917242.svg" />
           </h1>
         </div>
@@ -149,3 +151,9 @@ export default function Dashboard() {
     </Fragment>
   );
 }
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps)(Dashboard);

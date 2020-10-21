@@ -24,19 +24,22 @@ export class Register1 extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    // const { username, email, password } = this.state;
-    // const newUser = {
-    //   username,
-    //   password,
-    //   email,
-    // };
-    // this.props.register(newUser);
+    const { username, email, password } = this.state;
+    const newUser = {
+      username,
+      password,
+      email,
+    };
+    this.props.register(newUser);
     console.log("submit");
   };
 
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
+    if (this.props.isAuthenticated) {
+      return <Redirect to="/" />;
+    }
     const { username, email, password, password2 } = this.state;
     return (
       <div className="window">
@@ -164,6 +167,8 @@ export class Register1 extends Component {
   }
 }
 
-export default Register1;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
 
-// ---------------
+export default connect(mapStateToProps, { register, createMessage })(Register1);
