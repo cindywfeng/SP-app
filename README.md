@@ -1,6 +1,10 @@
-# Solo Project: Skincare Routine Log App
+# CARE - A Skincare Routine Log App 🌿
+
+---
 
 http://cindyfengw.pythonanywhere.com
+
+---
 
 ## Description
 
