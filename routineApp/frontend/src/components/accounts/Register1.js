@@ -96,7 +96,7 @@ export class Register1 extends Component {
                   <h1 className="title">Register</h1>
                 </Grid>
                 <Grid item>
-                  <form onSubmit={this.handleSubmit}>
+                  <form onSubmit={this.onSubmit}>
                     <Grid container direction="column" spacing={2}>
                       <Grid item>
                         <TextField
@@ -107,11 +107,7 @@ export class Register1 extends Component {
                           name="username"
                           variant="outlined"
                           value={this.state.username}
-                          onChange={(event) =>
-                            this.setState({
-                              [event.target.name]: event.target.value,
-                            })
-                          }
+                          onChange={this.onChange}
                           required
                           autoFocus
                         />
@@ -125,11 +121,7 @@ export class Register1 extends Component {
                           name="email"
                           variant="outlined"
                           value={this.state.email}
-                          onChange={(event) =>
-                            this.setState({
-                              [event.target.name]: event.target.value,
-                            })
-                          }
+                          onChange={this.onChange}
                           required
                           autoFocus
                         />
@@ -142,11 +134,7 @@ export class Register1 extends Component {
                           name="password"
                           variant="outlined"
                           value={this.state.password}
-                          onChange={(event) =>
-                            this.setState({
-                              [event.target.name]: event.target.value,
-                            })
-                          }
+                          onChange={this.onChange}
                           required
                         />
                       </Grid>

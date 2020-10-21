@@ -41,6 +41,14 @@ export default function (state = initialState, action) {
       };
     case AUTH_ERROR:
     case LOGIN_FAIL:
+      localStorage.removeItem("token");
+      return {
+        ...state,
+        token: null,
+        user: null,
+        isAuthenticated: false,
+        isLoading: false,
+      };
     case LOGOUT_SUCCESS:
     case REGISTER_FAIL:
       localStorage.removeItem("token");

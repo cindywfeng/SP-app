@@ -12,7 +12,7 @@ import "./Login1.css";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { register } from "../../actions/auth";
+import { login } from "../../actions/auth";
 import { createMessage } from "../../actions/messages";
 
 export class Login1 extends Component {
@@ -20,16 +20,23 @@ export class Login1 extends Component {
     username: "",
     password: "",
   };
+  static propTypes = {
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool,
+  };
 
   onSubmit = (e) => {
     e.preventDefault();
-    // this.props.login(this.state.username, this.state.password);
+    this.props.login(this.state.username, this.state.password);
     console.log("submitted");
   };
 
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
+    if (this.props.isAuthenticated) {
+      return <Redirect to="/" />;
+    }
     const { username, password } = this.state;
     return (
       <div className="window">
@@ -89,7 +96,7 @@ export class Login1 extends Component {
                   <h1 className="title">Sign in</h1>
                 </Grid>
                 <Grid item>
-                  <form onSubmit={this.handleSubmit}>
+                  <form onSubmit={this.onSubmit}>
                     <Grid container direction="column" spacing={2}>
                       <Grid item>
                         <TextField
@@ -100,11 +107,7 @@ export class Login1 extends Component {
                           name="username"
                           variant="outlined"
                           value={this.state.username}
-                          onChange={(event) =>
-                            this.setState({
-                              [event.target.name]: event.target.value,
-                            })
-                          }
+                          onChange={this.onChange}
                           required
                           autoFocus
                         />
@@ -117,11 +120,7 @@ export class Login1 extends Component {
                           name="password"
                           variant="outlined"
                           value={this.state.password}
-                          onChange={(event) =>
-                            this.setState({
-                              [event.target.name]: event.target.value,
-                            })
-                          }
+                          onChange={this.onChange}
                           required
                         />
                       </Grid>
@@ -150,6 +149,10 @@ export class Login1 extends Component {
   }
 }
 
-export default Login1;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps, { login })(Login1);
 
 // ---------------
