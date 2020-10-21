@@ -17,7 +17,7 @@ class RoutineViewSet(viewsets.ModelViewSet):
     serializer_class = RoutineSerializer
 
     def get_queryset(self):
-        return self.request.user.items.all()
+        return self.request.user.routines.all()
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -29,3 +29,9 @@ class ItemViewSet(viewsets.ModelViewSet):
         permissions.AllowAny
     ]
     serializer_class = ItemSerializer
+
+    def get_queryset(self):
+        return self.request.user.items.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
