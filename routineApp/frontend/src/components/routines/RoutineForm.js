@@ -192,13 +192,7 @@ export class RoutineForm extends Component {
           />
         );
       case 7:
-        return (
-          <Form1
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
+        return <Redirect to="/login" />;
       default:
         console.log("This is a multi-step form built with React.");
     }

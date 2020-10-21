@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getRoutines } from "../../actions/routines";
 
 import "./EmailForm.css";
+import Routines from "./Routines";
 
 export class EmailForm extends Component {
   componentDidMount() {
@@ -110,7 +111,16 @@ export class EmailForm extends Component {
                     id="message"
                     name="message"
                     rows="5"
-                    defaultValue={(lastRoutine, lastRoutine1)}
+                    defaultValue={`
+                    comment: "9"
+                    itemid1: "10"
+                    itemid2: "11"
+                    itemid3: "12"
+                    itemid4: "13"
+                    itemid5: "14"
+                    itemid6: "15"
+                    itemid7: "16"
+                    timeofday: "morning" `}
                   ></textarea>
                 </div>
               </div>
