@@ -10,6 +10,7 @@ import RoutineForm from "./RoutineForm";
 import EmailForm from "./EmailForm";
 import Login1 from "../accounts/Login1";
 import Register1 from "../accounts/Register1";
+import Name from "../layout/Name";
 
 import Modal from "react-modal";
 
@@ -100,7 +101,7 @@ function Dashboard() {
             </Modal>
           </div>
           <h1>
-            Welcome
+            Welcome, <Name />
             <img src="https://www.flaticon.com/svg/static/icons/svg/2917/2917242.svg" />
           </h1>
         </div>
@@ -146,7 +147,6 @@ function Dashboard() {
       </div>
       <div className="content-area">
         <Routines />
-        {/* <Login1 /> */}
       </div>
     </Fragment>
   );
