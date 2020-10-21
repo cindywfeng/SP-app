@@ -6,37 +6,38 @@ import {
   Paper,
   Typography,
   Toolbar,
-  Link,
+  Link as Link1,
 } from "@material-ui/core";
 import "./Login1.css";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { register } from "../../actions/auth";
+import { createMessage } from "../../actions/messages";
 
 export class Register1 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { username: "", password: "", authflag: 1 };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    username: "",
+    email: "",
+    password: "",
+  };
 
-  handleChange(event) {
-    this.setState({
-      username: event.state.username,
-      password: event.state.password,
-    });
-  }
-  handleSubmit(event) {
-    event.preventDefault();
-    if (
-      this.state.username == "admin@littech.in" &&
-      this.state.password == "secret"
-    ) {
-      this.props.history.push("/home");
-    } else {
-      alert("Incorrect Credntials!");
-    }
-  }
+  onSubmit = (e) => {
+    e.preventDefault();
+    // const { username, email, password } = this.state;
+    // const newUser = {
+    //   username,
+    //   password,
+    //   email,
+    // };
+    // this.props.register(newUser);
+    console.log("submit");
+  };
+
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
+    const { username, email, password, password2 } = this.state;
     return (
       <div className="window">
         <div className="blob">
@@ -103,7 +104,7 @@ export class Register1 extends Component {
                           type="text"
                           placeholder="First Name"
                           fullWidth
-                          name="email"
+                          name="username"
                           variant="outlined"
                           value={this.state.username}
                           onChange={(event) =>
@@ -121,9 +122,9 @@ export class Register1 extends Component {
                           type="email"
                           placeholder="Email"
                           fullWidth
-                          name="username"
+                          name="email"
                           variant="outlined"
-                          value={this.state.username}
+                          value={this.state.email}
                           onChange={(event) =>
                             this.setState({
                               [event.target.name]: event.target.value,
@@ -161,9 +162,10 @@ export class Register1 extends Component {
                   <br />
                 </Grid>
                 <Grid item className="sub-text-container">
-                  <a href="#" className="sub-text">
-                    Already have an account? Sign in here
-                  </a>
+                  <a href="#" className="sub-text"></a>
+                  <p className="sub-text">
+                    Already have an account? <Link to="/login">Sign in</Link>
+                  </p>
                 </Grid>
               </Paper>
             </Grid>

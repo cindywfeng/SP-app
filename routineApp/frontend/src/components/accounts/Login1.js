@@ -6,37 +6,31 @@ import {
   Paper,
   Typography,
   Toolbar,
-  Link,
+  Link as Link1,
 } from "@material-ui/core";
 import "./Login1.css";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { register } from "../../actions/auth";
+import { createMessage } from "../../actions/messages";
 
 export class Login1 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { username: "", password: "", authflag: 1 };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    username: "",
+    password: "",
+  };
 
-  handleChange(event) {
-    this.setState({
-      username: event.state.username,
-      password: event.state.password,
-    });
-  }
-  handleSubmit(event) {
-    event.preventDefault();
-    if (
-      this.state.username == "admin@littech.in" &&
-      this.state.password == "secret"
-    ) {
-      this.props.history.push("/home");
-    } else {
-      alert("Incorrect Credntials!");
-    }
-  }
+  onSubmit = (e) => {
+    e.preventDefault();
+    // this.props.login(this.state.username, this.state.password);
+    console.log("submitted");
+  };
+
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
+    const { username, password } = this.state;
     return (
       <div className="window">
         <div className="blob">
@@ -100,8 +94,8 @@ export class Login1 extends Component {
                       <Grid item>
                         <TextField
                           className="text-field"
-                          type="email"
-                          placeholder="Email"
+                          type="text"
+                          placeholder="First Name"
                           fullWidth
                           name="username"
                           variant="outlined"
@@ -143,9 +137,9 @@ export class Login1 extends Component {
                   <br />
                 </Grid>
                 <Grid item className="sub-text-container">
-                  <a href="#" className="sub-text">
-                    Don't have an account? Register here
-                  </a>
+                  <p className="sub-text">
+                    Don't have an account? <Link to="/register">Register</Link>
+                  </p>
                 </Grid>
               </Paper>
             </Grid>
