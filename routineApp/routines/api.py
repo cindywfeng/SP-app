@@ -14,10 +14,13 @@ class RoutineViewSet(viewsets.ModelViewSet):
         permissions.IsAuthenticated
     ]
 
+    serializer_class = RoutineSerializer
+
     def get_queryset(self):
         return self.request.user.items.all()
 
-    serializer_class = RoutineSerializer
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class ItemViewSet(viewsets.ModelViewSet):
