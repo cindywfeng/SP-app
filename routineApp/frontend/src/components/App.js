@@ -45,7 +45,6 @@ class App extends Component {
         <AlertProvider template={AlertTemplate} {...alertOptions}>
           <Router>
             <Fragment>
-              <Header />
               <Alerts />
               <div className="container">
                 <Switch>

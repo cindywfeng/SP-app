@@ -11,6 +11,7 @@ import EmailForm from "./EmailForm";
 import Login1 from "../accounts/Login1";
 import Register1 from "../accounts/Register1";
 import Name from "../layout/Name";
+import Header from "../layout/Header";
 
 import Modal from "react-modal";
 
@@ -97,6 +98,7 @@ function Dashboard() {
               </button>
               <div className="center">
                 <EmailForm />
+                <Header />
               </div>
             </Modal>
           </div>
