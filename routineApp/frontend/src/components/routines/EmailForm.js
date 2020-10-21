@@ -112,14 +112,14 @@ export class EmailForm extends Component {
                     name="message"
                     rows="5"
                     defaultValue={`
-                    comment: "9"
+                    comment: ""
                     itemid1: "10"
-                    itemid2: "11"
-                    itemid3: "12"
-                    itemid4: "13"
-                    itemid5: "14"
-                    itemid6: "15"
-                    itemid7: "16"
+                    itemid2: "16"
+                    itemid3: "11"
+                    itemid4: "12"
+                    itemid5: "13"
+                    itemid6: "14"
+                    itemid7: "15"
                     timeofday: "morning" `}
                   ></textarea>
                 </div>
