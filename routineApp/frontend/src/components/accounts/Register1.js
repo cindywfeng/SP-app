@@ -22,6 +22,11 @@ export class Register1 extends Component {
     password: "",
   };
 
+  static propTypes = {
+    register: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool,
+  };
+
   onSubmit = (e) => {
     e.preventDefault();
     const { username, email, password } = this.state;
