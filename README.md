@@ -2,11 +2,11 @@
 
 http://cindyfengw.pythonanywhere.com
 
-## description
+## Description
 
 This app allows users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. It also comes with the feature of sending reports of their daily skincare routine from the app to their email addresses.
 
-## instructions
+## Instructions
 
 - Install (1): `pip install -r requirements.txt`
 - Install (2): `npm install`
@@ -15,12 +15,12 @@ This app allows users to create their own library of skincare products which the
 - terminal 3: `pipenv shell` > `cd routineapp` > `cd frontend` > `cd src` > `cd components` > `node server.js`
 - visit http://localhost:8000/
 
-## main features
+## Main Features
 
-## technology specifications
+## Technology Specifications
 
-## planning and wireframes
+## Planning
 
-## challenges & solutions
+## Challenges & Solutions
 
-## future futures
+## Future Futures
