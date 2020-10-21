@@ -1,6 +1,11 @@
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 // components
 import Header from "./layout/Header.js";
@@ -29,19 +34,21 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Provider store={store}>
-            <AlertProvider template={AlertTemplate} {...alertOptions}>
-              <Fragment>
-                {/* <Header /> */}
-                <Alerts />
-                <Dashboard />
-              </Fragment>
-            </AlertProvider>
-          </Provider>
-        </Switch>
-      </BrowserRouter>
+      <Provider store={store}>
+        <AlertProvider template={AlertTemplate} {...alertOptions}>
+          <Router>
+            <Fragment>
+              {/* <Header /> */}
+              <Alerts />
+              <div className="container">
+                <Switch>
+                  <Route exact path="/" component={Dashboard} />
+                </Switch>
+              </div>
+            </Fragment>
+          </Router>
+        </AlertProvider>
+      </Provider>
     );
   }
 }
