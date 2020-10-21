@@ -1,12 +1,12 @@
 ---
-# CARE - A Skincare Routine Log App 🌿
+# CARE - A Skincare Routine Planner 🌿
 ---
 
 Link: http://cindyfengw.pythonanywhere.com
 
 ## Description
 
-This app allows users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. It also comes with the feature of sending reports of their daily skincare routine from the app to their email addresses.
+This app allows users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. The user can also send reports of their daily skincare routine from the app to their email addresses.
 
 ## Instructions
 
