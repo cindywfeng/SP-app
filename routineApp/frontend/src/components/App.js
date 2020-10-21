@@ -14,7 +14,7 @@ import Alerts from "./layout/Alerts";
 import EmailForm from "./routines/EmailForm";
 import Login1 from "./accounts/Login1";
 import Register1 from "./accounts/Register1";
-
+import PrivateRoute from "./common/PrivateRoute";
 // react redux store
 import { Provider } from "react-redux";
 import store from "../store";
@@ -45,7 +45,7 @@ class App extends Component {
               <Alerts />
               <div className="container">
                 <Switch>
-                  <Route exact path="/" component={Dashboard} />
+                  <PrivateRoute exact path="/" component={Dashboard} />
                   <Route path="/register" component={Register1} />
                   <Route path="/login" component={Login1} />
                 </Switch>
