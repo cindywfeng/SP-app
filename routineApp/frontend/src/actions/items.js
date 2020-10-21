@@ -2,13 +2,14 @@ import axios from "axios";
 
 // messages
 import { createMessage, returnErrors } from "./messages";
+import { tokenConfig } from "./auth";
 
 import { GET_ITEMS, DELETE_ITEM, ADD_ITEM } from "./types";
 
 // GET ITEMS
-export const getItems = () => (dispatch) => {
+export const getItems = () => (dispatch, getState) => {
   axios
-    .get("/api/items/")
+    .get("/api/items/", tokenConfig(getState))
     .then((res) => {
       dispatch({
         type: GET_ITEMS,
@@ -21,9 +22,9 @@ export const getItems = () => (dispatch) => {
 };
 
 // DELETE ITEM
-export const deleteItem = (id) => (dispatch) => {
+export const deleteItem = (id) => (dispatch, getState) => {
   axios
-    .delete(`/api/items/${id}/`)
+    .delete(`/api/items/${id}/`, tokenConfig(getState))
     .then((res) => {
       dispatch(createMessage({ deleteItem: "Item Deleted" }));
       dispatch({
@@ -35,9 +36,9 @@ export const deleteItem = (id) => (dispatch) => {
 };
 
 // ADD ITEM
-export const addItem = (item) => (dispatch) => {
+export const addItem = (item) => (dispatch, getState) => {
   axios
-    .post("/api/items/", item)
+    .post("/api/items/", item, tokenConfig(getState))
     .then((res) => {
       dispatch(createMessage({ addItem: "Item Added" }));
 
