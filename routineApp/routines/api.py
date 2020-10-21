@@ -11,8 +11,12 @@ from .serializers import ItemSerializer
 class RoutineViewSet(viewsets.ModelViewSet):
     queryset = Routine.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
+
+    def get_queryset(self):
+        return self.request.user.items.all()
+
     serializer_class = RoutineSerializer
 
 
