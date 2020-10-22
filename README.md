@@ -80,7 +80,7 @@ This app allows users to create their own library of skincare products which the
 
 ![wireframe overview](wireframe.png)
 ![ERD](erd.png)
-![Diagram](diagram.png)
+![Planning](diagram.png)
 
 ## Challenges & Solutions
 
