@@ -78,12 +78,33 @@ This app allows users to create their own library of skincare products which the
 
 ## Planning
 
+### Wireframes
+
+The first step of planning the App was creating the wireframes for the App using Figma. The main features I wanted to implement were:
+
+1. a multi-step form for creating the skincare routines.
+2. react modals instead of individual routes for different pages/component
+
 ![wireframe overview](wireframe.png)
+
+### Database
+
+Below is a representation of the two objects in the Django model.
+
+The first object 1. Items make up the collection of skincare items the user inputs to their library.
+
+The second object 2. Routines make up the collection of skincare routines with the chosen items (ForeignKeys from the Item object) for each step in the routine (cleansing, serum, treatment and moisturizing).
+
 ![ERD](erd.png)
+
+### Structure
+
 ![Planning](diagram1.png)
 
 ## Challenges & Solutions
 
 ## Future Features
+
+-
 
 </pre>
