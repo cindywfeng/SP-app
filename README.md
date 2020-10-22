@@ -115,11 +115,12 @@ The application uses a Django RESTful API with a React front-end. The React is i
 
 2. Posting a modified message to the user, with Nodemailer.
 
-In order to post data from the Django back-end to the NodeJS/Express endpoint, I stringified the fetched "routine" object from the backend. I attempted to modify the fetched object to customize it and make it more readable, however due to that the stringified object was sent to the express server endpoint as a default object in a form, the functions that would modify the object would not run before the POST request was made, hence reading the modified object as "undefined". **_I was only able to overcome it by adding some optional arguments to the stringify method, which made it slightly more readable._**
+**_solution_**: In order to post data from the Django back-end to the NodeJS/Express endpoint, I stringified the fetched "routine" object from the backend. I attempted to modify the fetched object to customize it and make it more readable, however due to that the stringified object was sent to the express server endpoint as a default object in a form, the functions that would modify the object would not run before the POST request was made, hence reading the modified object as "undefined". **_I was only able to overcome it by adding some optional arguments to the stringify method, which made it slightly more readable._**
 
 ## Future Features
 
 1. Send customized e-mails. Currently, the E-mail function posts a stringified JSON object to Nodemailer that in turn creates the email sent to the user. The stringified object is currently the raw version of the routine object. I would like to find a solution that would allow me sending modified objects so that the reports become more readable and customized.
+
 2. Include charts and counters to give more detailed information about the frequency and duration of the use of the skincare products in the user's library.
 
 </pre>
