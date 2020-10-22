@@ -12,7 +12,7 @@ This app allow users to create their own library of skincare products which they
 
 ## How to use:
 
-![Sign in page](signin.PNG)
+![Sign in page](signin.png)
 
 ## Instructions
 
