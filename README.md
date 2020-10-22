@@ -109,7 +109,7 @@ The application uses a Django RESTful API with a React front-end. The React is i
 
 1. Displaying ForeignKey in different Format. The Django model was made up of two objects 1. Item and 2. Routines. The "Routine" object had ForeignKeys itemid1-7 from the "Item" object. **_When rendering the ForeignKey value on the front-end, the value would show up as the id of the item instance rather than the name of the item instance._**
 
-**_Solution_**: **_To solve this, I had to add a to_representation method that overrides the RelatedField,_** to customize the relational field. Which resulted in rendering the name instead of the id on the front-end.
+**_Solution_**: **_To solve this, I added a to_representation method that overrides the RelatedField,_** to customize the relational field. Which resulted in rendering the name instead of the id on the front-end.
 
 ![solution1](torep.png)
 
