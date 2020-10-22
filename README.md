@@ -14,7 +14,7 @@ This app allows users to create their own library of skincare products which the
 
 ## Purpose
 
-The purpose of the app was to let users track and plan their skincare routines. Being someone who use several skincare treatments to treat different skin concerns, the combination of the treatments can sometimes be too harsh on the skin. With this app, the user can input the products they frequently use in their skincare routine to plan and log their morning/evening routines, and keep a track on what products they have been using recently and decide if it is time to pause/ continue the use of a product.
+The purpose of the app was to let users track and plan their skincare routines. Being someone who use different skincare treatments to treat different skin concerns, the combination of the treatments can sometimes be too harsh on the skin. With this app, the user can input the products they frequently use in their skincare routine to plan and log their morning/evening routines, and keep a track on what products they have been using recently and decide if it is time to pause/ continue the use of a product.
 
 ## How to use:
 
