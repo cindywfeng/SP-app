@@ -5,6 +5,17 @@ import { getRoutines } from "../../actions/routines";
 import "./EmailForm.css";
 import Routines from "./Routines";
 
+// `
+//                     comment: ""
+//                     itemid1: "10"
+//                     itemid2: "16"
+//                     itemid3: "11"
+//                     itemid4: "12"
+//                     itemid5: "13"
+//                     itemid6: "14"
+//                     itemid7: "15"
+//                     timeofday: "morning" `
+
 export class EmailForm extends Component {
   componentDidMount() {
     this.props.getRoutines();
@@ -111,16 +122,7 @@ export class EmailForm extends Component {
                     id="message"
                     name="message"
                     rows="5"
-                    defaultValue={`
-                    comment: ""
-                    itemid1: "10"
-                    itemid2: "16"
-                    itemid3: "11"
-                    itemid4: "12"
-                    itemid5: "13"
-                    itemid6: "14"
-                    itemid7: "15"
-                    timeofday: "morning" `}
+                    defaultValue={lastRoutine}
                   ></textarea>
                 </div>
               </div>

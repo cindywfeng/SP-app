@@ -1,28 +1,33 @@
 ---
-# CARE - A Skincare Routine Planner 🌿
+# CARE - A Skincare Routine Diary & Planner 🌿
 ---
 
 Link: http://cindyfengw.pythonanywhere.com
 
 ## Description
 
-This app allows users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. The user can also send reports of their daily skincare routine from the app to their email addresses.
+This app allow users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. The user can also send reports of their daily skincare routine from the app to their email address.
+
+## The purpose of building this app
+
+## How to use:
+
+![Screenshot 2020-10-21 at 21.08.33](Screenshot 2020-10-21 at 21.08.33.PNG)
 
 ## Instructions
 
-- Install (1): `pip install -r requirements.txt`
-- Install (2): `npm install`
-- terminal 1: `pipenv shell` > `cd routineapp` > `python manage.py runserver`
-- terminal 2: `pipenv shell` > `cd routineapp` > `npm run dev`
-- terminal 3: `pipenv shell` > `cd routineapp` > `cd frontend` > `cd src` > `cd components` > `node server.js`
+- Fork and Clone
+- Install dependencies (1): `pip install -r requirements.txt`
+- Install dependencies (2): `npm install`
+- terminal 1: Start up API `pipenv shell` > `cd routineapp` > `python manage.py runserver`
+- terminal 2: Run Webpack `pipenv shell` > `cd routineapp` > `npm run dev`
+- terminal 3: Start up server for the e-mail feature `pipenv shell` > `cd routineapp` > `cd frontend` > `cd src` > `cd components` > `node server.js`
 - visit http://localhost:8000/
 
-## Main Features
-
-## Technology Specifications
+## Technologies used:
 
 ## Planning
 
 ## Challenges & Solutions
 
-## Future Futures
+## Future Features
