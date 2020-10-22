@@ -61,7 +61,7 @@ This app allows users to create their own library of skincare products which the
 - **Token-based Authentication: Django Knox**
 - **Webpack** (module bundling)
 - Babel
-- NodeMailer (creation of e-mail functionality)
+- [NodeMailer](https://github.com/nodemailer/nodemailer) (creation of e-mail functionality)
 - Postman (API testing)
 - NodeJS
 - Express (side back-end server for e-mail)
@@ -73,8 +73,8 @@ This app allows users to create their own library of skincare products which the
 - Material UI
 - React Bootstrap
 - Animate.CSS
-- React Alert
-- React Modal
+- [React Alert](https://www.npmjs.com/package/react-alert)
+- [React Modal](https://www.npmjs.com/package/react-modal)
 
 ## Planning
 
