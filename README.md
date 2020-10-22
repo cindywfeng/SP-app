@@ -2,7 +2,7 @@
 
 ---
 
-# CARE - A Skincare Diary & Planner 🌿
+# care - A Skincare Diary & Planner 🌿
 
 ---
 
@@ -83,7 +83,7 @@ This app allows users to create their own library of skincare products which the
 The first step of planning the App was creating the wireframes for the App using Figma. The main features I wanted to implement were:
 
 1. a **_multi-step form_** for creating the skincare routines.
-2. **_react modals_** instead of individual routes for different pages/component
+2. **_react modals_** instead of individual routes for different pages/components
 
 ![wireframe overview](wireframe.png)
 
@@ -99,12 +99,24 @@ The second object 2. **_Routines_** make up the collection of skincare routines 
 
 ### Structure
 
+The application uses a Django RESTful API with a React front-end. The React is in its own "frontend" Django app. Within the "frontend" Django app is a NodeJS/Express app which implement the Nodemailer module to send reports to the user's email address.
+
 ![Planning](diagram1.png)
 
 ## Challenges & Solutions
 
+1. Displaying ForeignKey in different Format. The Django model was made up of two objects 1. Item and 2. Routines. The "Routine" object had ForeignKeys itemid1-7 from the "Item" object. When rendering the ForeignKey value on the front-end, the value would show up as the id of the item instance rather than the name of the item instance.
+
+**_Solution_**: To solve this, I had to add a to_representation method that overrides the RelatedField, to customize the relational field. Which resulted in rendering the name instead of the id on the front-end.
+
+![solution1](torep.png)
+
+2. Posting a modified message to the user, with Nodemailer.
+
+In order to post data from the Django back-end to the NodeJS/Express endpoint, I stringified the fetched "routine" object from the backend. I attempted to modify the fetched object to customize it and make it more readable, however due to that the stringified object was sent to the express server endpoint as a default object in a form, the functions that would modify the object would not run before the POST request was made, hence reading the modified object as "undefined". I was only able to overcome it by adding some optional arguments to the stringify method, which made it slightly more readable.
+
 ## Future Features
 
--
+Send customized e-mails. Currently, the E-mail function posts a stringified JSON object to Nodemailer that in turn creates the email sent to the user. The stringified object is currently the raw version of the routine object. I would like to find a solution that would allow me sending modified objects so that the reports become more readable and customized.
 
 </pre>
