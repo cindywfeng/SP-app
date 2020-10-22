@@ -84,6 +84,13 @@ The purpose of the app was to let users track and plan their skincare routines. 
 
 The first step of planning the App was creating the wireframes for the App using Figma. The main features I wanted to implement were:
 
+1. Adding and deleting skincare routines from a list
+2. Adding and deleting skincare items from a list
+3. E-mail function to send a report of the most recent routines to the user
+4. Authentication and Authorization functions
+
+The main **_design_** features I wanted to implement were:
+
 1. a **_multi-step form_** for creating the skincare routines.
 2. **_react modals_** instead of individual routes for different pages/components
 
