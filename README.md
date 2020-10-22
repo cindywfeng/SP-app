@@ -13,6 +13,11 @@ This app allow users to create their own library of skincare products which they
 ## How to use:
 
 ![Sign in page](signin.png)
+![Dashboard page](header.png)
+![Routines page](routines.png)
+![Form page](routineform1.png)
+![treatment form page](treatmentform.png)
+![serum form page](serumform.png)
 
 ## Instructions
 
