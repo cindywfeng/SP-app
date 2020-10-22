@@ -8,11 +8,11 @@ Link: http://cindyfengw.pythonanywhere.com
 
 This app allow users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. The user can also send reports of their daily skincare routine from the app to their email address.
 
-## The purpose of building this app
+## The purpose
 
 ## How to use:
 
-![Screenshot 2020-10-21 at 21.08.33](Screenshot 2020-10-21 at 21.08.33.PNG)
+![Screenshot 2020-10-21 at 21.08.33](readmeimages/Screenshot 2020-10-21 at 21.08.33.png)
 
 ## Instructions
 
