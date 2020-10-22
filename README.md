@@ -122,7 +122,7 @@ The application uses a Django RESTful API with a React front-end. The React is i
 
 2. Posting a modified message to the user, with Nodemailer.
 
-**_Solution_**: To post data from the Django back-end to the NodeJS/Express endpoint, I stringified the fetched "routine" object from the backend. I attempted to modify the fetched object to customize it and make it more readable, however due to that the stringified object was sent to the express server endpoint as a default value in a form, the functions that would modify the object would not run before the POST request was made, hence reading the modified object as "undefined". **_I was only able to overcome it by adding some optional arguments to the stringify method, which made it slightly more readable._**
+**_Solution_**: To post data from the Django back-end to the NodeJS/Express endpoint, I stringified the fetched "routine" object from the backend. I attempted to modify the fetched object to customize it and make it more readable, however due to that the stringified object was sent to the express server endpoint as a default value in a form, the functions that would modify the object would not run before the POST request was made, hence reading the modified object as "undefined". I solved this by adding some optional arguments to the stringify method, which made it slightly more readable.
 
 ## Future Features
 
