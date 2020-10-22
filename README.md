@@ -121,6 +121,6 @@ The application uses a Django RESTful API with a React front-end. The React is i
 
 1. Send customized e-mails. Currently, the E-mail function posts a stringified JSON object to Nodemailer that in turn creates the email sent to the user. The stringified object is currently the raw version of the routine object. I would like to find a solution that would allow me sending modified objects so that the reports become more readable and customizable.
 
-2. Include charts and counters to give more detailed information about the frequency and duration of the use of the skincare products in the user's items collection.
+2. Include charts and counters to give more detailed information about the frequency and duration of the use of the skincare products.
 
 </pre>
