@@ -15,16 +15,26 @@ This app allow users to create their own library of skincare products which they
 ![Sign in page](signin.png)
 
 1. Register and Sign in with your name and password.
+
    ![Dashboard page](header.png)
-2. On the dashboard page you can 1. add your routine, 2. add a skincare product, 3. view your routines, 4. send e-reports of your routines to your e-mail (by clicking the nav-menu)
+
+2. On the dashboard page you can 1. add your routine, 2. add a skincare product, 3. view your routines, 4. send e-reports of your routines to your e-mail
+
    ![Routines page](routines.png)
-3. The list of our skincare routines will display the products you used in your routines, and any comments your made.
+
+3. The list of skincare routines will display the products you used in your routines
+
    ![Form page](routineform1.png)
-4. When adding your skincare routine you will first be asked if it is a morning or evening routine, then what products you used for the steps in your routine.
+
+4. Create your skincare routine
+
    ![treatment form page](treatmentform.png)
-5. On the right hand side you of the products forms you will see a list of your products from your library that you may want to use at each step of your routine.
+
+5. The list on the right will show you the skincare products from your skincare products library
+
    ![serum form page](serumform.png)
-6. The list updates according to what step you are reviewing in your routine and only renders the products that fit the category.
+
+6. The list updates according to what step you are reviewing and only displays the products suitable for that step
 
 ## Instructions
 
