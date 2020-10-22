@@ -1,5 +1,7 @@
----
+## <pre>
+
 # CARE - A Skincare Routine Diary & Planner 🌿
+
 ---
 
 Link: http://cindyfengw.pythonanywhere.com
@@ -53,3 +55,5 @@ This app allow users to create their own library of skincare products which they
 ## Challenges & Solutions
 
 ## Future Features
+
+</pre>
