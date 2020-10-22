@@ -2,7 +2,7 @@
 
 ---
 
-# CARE - A Skincare Diary & Planner 🌾
+# CARE - A Skincare Diary & Planner 🌿
 
 ---
 
@@ -28,9 +28,17 @@ This app allows users to create their own library of skincare products which the
 
 3. The list of skincare routines will display the products you used in your routines
 
+   ![skincare products](skincareproducts.png)
+
+4. Add and delete skincare products to your skincare products library
+
    ![serum form page](serumform.png)
 
-4. Create your skincare routine. The list on the right will show you the skincare products from your skincare products library suitable for each step.
+5. Create your skincare routine. The list on the right will show you the skincare products from your skincare products library suitable for each step.
+
+   ![e-mail form](email.png)
+
+6. Send an e-report of your latest skincare routine to your email address
 
 ## Instructions
 
