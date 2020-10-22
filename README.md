@@ -2,7 +2,7 @@
 
 ---
 
-# CARE - A Skincare Diary & Planner 🌿
+# CARE - A Skincare Diary & Planner 🌾
 
 ---
 
@@ -12,7 +12,7 @@ Link: http://cindyfengw.pythonanywhere.com
 
 This app allows users to create their own library of skincare products which they can use in planning and logging their daily skincare routines. The user can also send reports of their daily skincare routine from the app to their email address.
 
-## The purpose
+## Purpose
 
 ## How to use:
 
@@ -30,11 +30,7 @@ This app allows users to create their own library of skincare products which the
 
    ![serum form page](serumform.png)
 
-4. Create your skincare routine. The list on the right will show you the skincare products from your skincare products library.
-
-   ![treatment form page](treatmentform.png)
-
-5. The list updates accordingly to what step you are reviewing and only displays the products suitable for that specific step
+4. Create your skincare routine. The list on the right will show you the skincare products from your skincare products library suitable for each step.
 
 ## Instructions
 
