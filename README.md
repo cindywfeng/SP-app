@@ -52,6 +52,29 @@ This app allows users to create their own library of skincare products which the
 
 ## Technologies used:
 
+- Django
+- ReactJS
+- Redux
+- Database: SQLite3
+- HTML/CSS
+- Creation of API: Django REST Framework
+- Token-based Authentication: Django Knox
+- Webpack (module bundling)
+- Babel
+- NodeMailer (creation of e-mail functionality)
+- Postman (API teting)
+- NodeJS
+- Express (side back-end server for e-mail)
+- Deployment: PythonAnywhere
+
+### Other frameworks & libraries:
+
+- Material UI
+- React Bootstrap
+- Animate.CSS
+- React Alert
+- React Modal
+
 ## Planning
 
 ![wireframe overview](wireframe.png)
