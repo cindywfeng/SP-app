@@ -66,6 +66,7 @@ This app allows users to create their own library of skincare products which the
 - NodeJS
 - Express (side back-end server for e-mail)
 - **Deployment: PythonAnywhere**
+- **Planning/Wireframing: Figma**
 
 ### Other frameworks & libraries:
 
@@ -78,6 +79,7 @@ This app allows users to create their own library of skincare products which the
 ## Planning
 
 ![wireframe overview](wireframe.png)
+![ERD](erd.png)
 
 ## Challenges & Solutions
 
