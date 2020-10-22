@@ -14,7 +14,7 @@ This app allows users to create their own library of skincare products which the
 
 ## Purpose
 
-The purpose of the app was to let user's track and plan their skincare routines. Being someone who use several treatments to treat different skin concerns, the combination of different treatments can sometimes be too harsh on my skin. With this app, the user can input the products they frequently use in their skincare routine to plan and log their morning/evening routines, to keep a track on what products they have used most recently and decide when it is time to take a pause/ continue the use of a product.
+The purpose of the app was to let users track and plan their skincare routines. Being someone who use several skincare treatments to treat different skin concerns, the combination of different treatments can sometimes be too harsh on my skin. With this app, the user can input the products they frequently use in their skincare routine to plan and log their morning/evening routines, and keep a track on what products they have been using recently and decide if it is time to pause/ continue the use of a product.
 
 ## How to use:
 
@@ -119,6 +119,7 @@ In order to post data from the Django back-end to the NodeJS/Express endpoint, I
 
 ## Future Features
 
-Send customized e-mails. Currently, the E-mail function posts a stringified JSON object to Nodemailer that in turn creates the email sent to the user. The stringified object is currently the raw version of the routine object. I would like to find a solution that would allow me sending modified objects so that the reports become more readable and customized.
+1. Send customized e-mails. Currently, the E-mail function posts a stringified JSON object to Nodemailer that in turn creates the email sent to the user. The stringified object is currently the raw version of the routine object. I would like to find a solution that would allow me sending modified objects so that the reports become more readable and customized.
+2. Include charts and counters to give more detailed information about the frequency and duration of the use of the skincare products in the user's library.
 
 </pre>
